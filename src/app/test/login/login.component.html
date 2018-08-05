@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-login">
+        <!-- Header -->
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-6">
+              <h2>Iniciar sesión</h2>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <!-- Body -->
+        <div class="panel-body">
+          <div class="row">
+            
+            <div class="col-lg-12">
+              <form (ngSubmit)="iniciarSesion()" style="display: block;">
+                <!-- Inputs identificacion & contraseña -->
+                <div class="form-group">
+                  <input [(ngModel)]="identificacion" type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Ingrese la identificacion" required />
+                </div>
+                <div class="form-group">
+                  <input [(ngModel)]="clave" type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Ingrese la contraseña" required />
+                </div>
+                <!-- Iniciar sesión -->
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                      <button [disabled]="" type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login">Iniciar sesión</button>
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

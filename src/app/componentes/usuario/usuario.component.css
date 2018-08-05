@@ -1,0 +1,113 @@
+.contenedor-principal{
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  padding-right: 50px;
+  padding-left: 50px;
+  background-color: transparent;
+}
+div label {
+  color: #848889;
+}
+button.btn-guardar{
+  margin-left: 260px;
+  position: relative;
+  width: 100%;
+}
+/*
+.ContTitulo{
+  width: 315px;
+  padding-top: 4px;
+  padding-bottom: 15px;
+  margin-bottom: -29.5px;
+  border-top: 2px solid #02649C;
+  border-bottom:0px;
+  border-right: 2px solid #02649C;
+  border-left: 2px solid #02649C;
+  border-radius: 4px 4px 0 4px;
+}
+*/
+.contenedor-form{
+  border: 1.5px solid #3B9AC1;
+  border-radius: 4px;
+  padding: 30px 20px 40px 20px;
+  margin: 8px 0;
+  outline: none;
+  box-sizing: border-box;
+  background: #FFFFFF;
+}
+.Titutlo_form{
+  font-family: 'PT Sans';
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 15px;
+  color: #3B9AC1;
+}
+/*-----------------------------------------------
+                      INPUTS
+----------------------------------------------- */
+input[type=text]{
+  width: 100%;
+  border: 1px solid #AAAAAA;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+input[type=text]:focus{
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+
+/* ----------------- Inputs Error ----------------------*/
+.error input[type=text]{
+  border-color: #FF5D5D;
+  box-shadow: 0 0 8px 0 #FF5D5D;
+}
+/*-----Fondo Error al icono-----*/
+.inputWithIcon.inputWithIconBg.inputWithIconBgError i{
+  background-color: #FF5D5D;
+  color: #FFFFFF;
+}
+
+/*-----------------------------------------------
+              input con fondo e incono
+----------------------------------------------- */
+
+/*________Icono dentro del input________*/
+
+/* distancia del texto a la izquierda del input */
+.inputWithIcon input[type=text], input[type=password]{
+  padding-left: 45px;
+}
+
+.inputWithIcon{
+  position: relative;
+}
+/* Posicion y color del icono dentro del input*/
+.inputWithIcon i{
+  position: absolute;
+  left: 0px;
+  top: 33px;
+  padding: 9px 8px;
+  color: #b4b4b4;
+  transition: 0.3s;
+}
+/*________Fondo del icono________*/
+.inputWithIcon.inputWithIconBg i{
+  background-color: #AAAAAA;
+  color: #FFFFFF;
+  padding-top: 10px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  padding-left: 12px;
+  border-radius: 4px 0px 0px 4px;
+}
+.inputWithIcon.inputWithIconBg input[type=text]:focus + i{
+  color: #FFFFFF;
+  background-color: dodgerBlue;
+}

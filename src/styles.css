@@ -1,0 +1,54 @@
+.msg-error {
+    color: #A94442;
+}
+
+body.cont-body {
+    padding-top: 70px;
+    margin-bottom: 20px;
+    /*background-color: #F5F5F5;*/
+    background-image: url("./assets/img/fondo_principal.jpg");
+    background-repeat: no-repeat;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.balance-error {
+    background-color: #F8D7DA;
+}
+
+.balance-success {
+    background-color: #D4EDDA;
+}
+
+
+/* Animaciones */
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}

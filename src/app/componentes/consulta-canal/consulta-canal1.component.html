@@ -1,0 +1,234 @@
+<div class="col-xs-12">
+
+  <h2>Consulta de canal</h2>
+
+  <br>
+
+  <ng4-loading-spinner> </ng4-loading-spinner>
+
+  <div *ngIf="estado == 0" class="alert alert-danger" role="alert">
+    Se ha producido un error, intente mas tarde.
+  </div>
+
+  <div class="row">
+    <div *ngIf="!mostrarForm" class="form-group col-xs-6">
+      <div class="form-group">
+        <label class="control-label">Buscar canal</label>
+        <ng2-completer (selected)="onSelectedCanal($event)" [datasource]="dataServiceCanal" [inputClass]="['form-control']" [minSearchLength]="4"
+          [textSearching]="'Buscando...'" [placeholder]="'Buscar canal'" [textNoResults]="'Sin resultados'" [clearUnselected]="true"></ng2-completer>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="consultado" class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">Datos basicos</h3>
+    </div>
+    <div class="panel-body">
+
+      <div class="row">
+        <div class="col-xs-6">
+
+          <div class="form-group">
+            <label>Código</label>
+            <input value="{{canal.codigo}}" type="text" class="form-control" readonly/>
+          </div>
+
+          <div class="form-group">
+            <label>Nombre</label>
+            <input value="{{canal.nombre}}" type="text" class="form-control" readonly/>
+          </div>
+
+          <div class="form-group">
+            <label>Caudal diseño</label>
+            <input value="{{canal.caudalDisenio}}" type="text" class="form-control" readonly/>
+          </div>
+
+          <div class="form-group">
+            <label>Logintud Km</label>
+            <input value="{{canal.longitud}}" type="text" class="form-control" readonly/>
+          </div>
+
+          <div class="form-group">
+            <label>Sección tipica</label>
+            <input value="{{canal.seccionTipica}}" type="text" class="form-control" readonly/>
+          </div>
+
+          <div class="form-group">
+            <label>Clase</label>
+            <input value="{{canal.clase}}" type="text" class="form-control" readonly/>
+          </div>
+
+        </div>
+
+        <div class="col-xs-6">
+
+          <div class="form-group">
+            <label>Clase</label>
+            <input value="{{canal.clase}}" type="text" class="form-control" readonly/>
+          </div>
+
+          <div class="form-group">
+            <label>Tipo</label>
+            <input value="{{canal.tipo}}" type="text" class="form-control" readonly/>
+          </div>
+
+          <div class="form-group">
+            <label>Categoría</label>
+            <input value="{{canal.categoria}}" type="text" class="form-control" readonly/>
+          </div>
+
+          <div class="form-group">
+            <label>Estado</label>
+            <input value="{{canal.estadoDescripcion}}" type="text" class="form-control" readonly/>
+          </div>
+
+          <div class="form-group">
+            <label>Canal servidor</label>
+            <input value="{{canal.canalServidor}}" type="text" class="form-control" readonly/>
+          </div>
+
+          <div class="form-group">
+            <label>Total predios servidos</label>
+            <input value="{{canal.sumPredios}}" type="text" class="form-control" readonly/>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="row">
+
+        <div class="col-xs-3">
+
+          <h3>Estructuras de control</h3>
+
+          <div class="list-group">
+            <a *ngFor="let e of canal.lstEstructuraControl" href="" class="list-group-item">{{e.codigo}}</a>
+          </div>
+
+        </div>
+
+        <div class="col-xs-3">
+
+          <h3>Predios</h3>
+
+          <accordion>
+            <accordion-group *ngFor="let p of canal.lstPredio" heading="{{p.nombre}}">
+              <b>Usuario:</b> {{p.nombreUsuario}}
+            </accordion-group>
+          </accordion>
+
+
+        </div>
+
+        <div class="col-xs-3">
+
+          <h3>Obras</h3>
+
+
+            <select class="form-control" id="inputGroupSelect04" aria-label="Example select with button addon" [(ngModel)]="opcionSeleccionada">
+              <option selected>-- Seleccione --</option>
+              <option *ngFor="let o of canal.lstCanalObra; let i = index" (click)="openModal(template)" (click)="Seleccion(i)">{{o.obraId.nombre}}</option>
+            </select>
+
+            <ng-template #template class="modalCenter">
+              <div class="modal-header">
+                <h4 class="modal-title pull-left text-center">Información completa sobre las obras del canal de {{ canal.nombre }}</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="modal-body contenedor-body-modal">
+                <!-- Nombre del canal-->
+                <div class="input-group itemsModalleft">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><b> Nombre del canal </b></span>
+                    </div>
+                    <input type="text" aria-label="Nombre_canal" class="form-control text-modal" [(ngModel)]="canal.nombre" #fname="ngModel" disabled>
+                    <p>&nbsp;</p>
+                </div>
+
+                <!-- Nombre de la obra -->
+                <div class="input-group itemsModalright">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><b> Nombre de la obra </b></span>
+                    </div>
+                    <input type="text" aria-label="Nombre_obra" class="form-control text-modal" [(ngModel)]="canal.lstCanalObra[opcionSeleccionada].obraId.nombre" #fname="ngModel" disabled>
+                    <p>&nbsp;</p>
+                </div>
+
+                <!-- Descripcion -->
+                <div class="input-group itemsModalleft">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><b> Descripcion </b></span>
+                    </div>
+                    <textarea rows="2" cols="50" aria-label="Descripcion"
+                    class="form-control text-modal"
+                    [(ngModel)]="canal.lstCanalObra[opcionSeleccionada].descripcion" #fname="ngModel" disabled> </textarea>
+                    <p>&nbsp;</p>
+                </div>
+
+                <!-- Ultima version -->
+                <div class="input-group itemsModalright">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text ultima-version-title col-md-12"><b> Ultima versión </b></span>
+                    </div>
+                    <textarea name="ultimaversion" rows="2" cols="50" aria-label="Ultima version"
+                    class="form-control text-modal ultimaversion"
+                    [(ngModel)]="canal.lstCanalObra[opcionSeleccionada].ultimaIntervension" #fname="ngModel" disabled placeholder="Ultima Version"></textarea>
+                    <p>&nbsp;</p>
+                </div>
+                <!-- Coordenadas  -->
+                <div class="input-group itemsModalleft">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <b> Coordenadas: </b> </span>
+                  </div>
+                  <input type="number" aria-label="x" class="form-control text-modal" [(ngModel)]="canal.lstCanalObra[opcionSeleccionada].x" #fname="ngModel" disabled>
+                  <p>&nbsp;</p>
+                  <input type="number" aria-label="y" class="form-control text-modal" [(ngModel)]="canal.lstCanalObra[opcionSeleccionada].x" #fname="ngModel" disabled>
+                  <p>&nbsp;</p>
+                </div>
+
+                <!-- Altitud -->
+                <div class="input-group itemsModalleft">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><b> Altitud (m.s.n.m) </b></span>
+                    </div>
+                    <input type="number" aria-label="altitud" class="form-control text-modal" [(ngModel)]="canal.lstCanalObra[opcionSeleccionada].altitud" #fname="ngModel" disabled>
+                    <p>&nbsp;</p>
+                </div>
+
+                <!-- Imagen -->
+                <div class="itemsModalright">
+                  <div class="Spanimagen">
+                    <span> <b> Imagen </b></span>
+                  </div>
+                  <img [src]="img_obra" alt="" class="rounded float-right img-fluid" style="width:210px; height:185px;">
+                  <p>&nbsp;</p>
+                </div>
+
+              </div>
+
+            </ng-template>
+
+        </div>
+
+        <div class="col-xs-3">
+
+          <h3>Canales</h3>
+
+          <div class="list-group">
+            <p *ngFor="let c of canal.lstCanal">{{c}}</p>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
