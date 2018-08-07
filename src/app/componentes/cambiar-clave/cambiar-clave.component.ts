@@ -4,7 +4,6 @@ import * as decode from 'jwt-decode';
 import { UsersService } from '../../_service/users.service';
 import { Users } from '../../_model/users';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
-import { HIDE_NAV } from '../../_service/var.const';
 
 @Component({
   selector: 'app-cambiar-clave',
@@ -33,7 +32,7 @@ export class CambiarClaveComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.clave + ' ' + this.clave2);
+
   }
 
   /*
@@ -74,15 +73,9 @@ export class CambiarClaveComponent implements OnInit {
 
     this.usersService.cambiarClave(user).subscribe(res => {
 
-      this.estado = res;
+      this.estado = 1;
       this.clave = '';
       this.clave2 = '';
-
-      if (res == 1) {
-        // removemos el item si para mostrar el nav en el caso de que fuera usuario nuevo
-        sessionStorage.removeItem(HIDE_NAV);
-      }
-
       form.reset();
 
       this.spinnerService.hide();

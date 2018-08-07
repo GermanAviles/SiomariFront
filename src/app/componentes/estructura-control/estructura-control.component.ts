@@ -222,6 +222,14 @@ export class EstructuraControlComponent implements OnInit {
       //decimos si hay ecuacion o no
       this.ecuacion = this.a == null || this.b == null ? false : true;
 
+
+      //calculamos los valores para graficarlos
+      for (let i = 0; i <= 600; i += 50) {
+
+        let p = this.a * Math.pow(i, this.b);
+        y.push(p);
+
+      }
       //calculamos los valores para graficarlos
       for (let i = 0; i <= 600; i += 50) {
 
@@ -250,15 +258,14 @@ export class EstructuraControlComponent implements OnInit {
                 '#fff',
                 '#fff',
                 'rgba(148,159,177,0.8)'
-              ]
+              ],
             }
           ]
         },
         options: {
           title: {
             display: true,
-            text: 'Curva de calibración',
-            fontSize: 20
+            text: 'Curva de calibración'
           },
           legend: {
             display: false
@@ -268,17 +275,14 @@ export class EstructuraControlComponent implements OnInit {
               display: true,
               scaleLabel: {
                 display: true,
-                labelString: 'Caudal (L/s)',
-                fontColor: '#000'
-              },
-              
+                labelString: 'Caudal (L/s)'
+              }
             }],
             yAxes: [{
               display: true,
               scaleLabel: {
                 display: true,
-                labelString: 'Tirante de agua (m)',
-                fontColor: '#000'
+                labelString: 'Tirante de agua (m)'
               }
             }],
           }

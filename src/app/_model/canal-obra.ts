@@ -5,7 +5,6 @@ export class CanalObra {
 
     id: number;
     descripcion: string;
-    observacion: string;
     ultimaIntervension: string;
 	imagen: string;
     x: number;

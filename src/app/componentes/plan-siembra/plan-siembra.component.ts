@@ -93,7 +93,6 @@ export class PlanSiembraComponent implements OnInit {
       this.predio = new Predio();
       this.predio.id = selected.originalObject.id;
       this.predio.areaTotal = selected.originalObject.areaTotal;
-      this.predio.areaPotencialRiego = selected.originalObject.areaPotencialRiego;
     } else {
       this.predio = null;
     }
@@ -134,7 +133,7 @@ export class PlanSiembraComponent implements OnInit {
     }
 
     //verificamos que el area del predio sea valida
-    if (this.predio.areaPotencialRiego < sumHectareas) {
+    if (this.predio.areaTotal < sumHectareas) {
       this.hectareaValid = false;
     } else {
       this.hectareaValid = true;

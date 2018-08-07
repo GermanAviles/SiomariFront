@@ -28,7 +28,8 @@
         "../node_modules/chart.js/src/chart.js",
         "../src/assets/tether/tether.min.js",
         "../node_modules/jquery/dist/jquery.slim.min.js",
-        "../node_modules/popper.js/dist/umd/popper.min.js"
+        "../node_modules/popper.js/dist/umd/popper.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js"        
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

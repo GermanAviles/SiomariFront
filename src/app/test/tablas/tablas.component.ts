@@ -7,17 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TablasComponent implements OnInit {
 
-  lat: number = 2.937313;
-  lng: number = -75.302588;
-  zoom: number = 16;
-
-  constructor(
-  ) {
-  }
+  constructor() { }
 
   ngOnInit() {
-
   }
-
 
 }
