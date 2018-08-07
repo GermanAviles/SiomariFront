@@ -1,7 +1,6 @@
 .cursor-nav {
     cursor: pointer;
 }
-<<<<<<< HEAD
 /*--------------------------------------------
                     Navbar
 -----------------------------------------------*/
@@ -16,7 +15,7 @@ li > a.a-principal{
   color: #FFFFFF;
 }
 /*----------------------------------------------
-      estilo basico del Menu Desplegable
+                Menu Desplegable
 ------------------------------------------------*/
 /* Omitir los puntos de las listas */
 ul, ol{
@@ -350,5 +349,3 @@ ul.drop-menu li a{
   }
 
 }
-=======
->>>>>>> actualizaciones
