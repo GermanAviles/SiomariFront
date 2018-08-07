@@ -13,6 +13,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { TimepickerModule } from 'ngx-bootstrap/timepicker';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { AgmCoreModule } from '@agm/core';
 
 /*              SERVICE                                       */
 import { UnidadService } from './_service/unidad.service';
@@ -40,7 +42,7 @@ import { UsersService } from './_service/users.service';
 
 /*              COMPONENT                                       */
 import { AppComponent } from './app.component';
-import { LoginComponent } from './test/login/login.component';
+import { LoginComponent } from './componentes/login/login.component';
 import { GraficaComponent } from './test/grafica/grafica.component';
 import { TablasComponent } from './test/tablas/tablas.component';
 import { UnidadComponent } from './componentes/unidad/unidad.component';
@@ -75,6 +77,8 @@ import { CanalObraComponent } from './componentes/canal-obra/canal-obra.componen
 import { DistritoComponent } from './componentes/distito/distrito.component';
 import { UsersComponent } from './componentes/users/users.component';
 import { CambiarClaveComponent } from './componentes/cambiar-clave/cambiar-clave.component';
+import { DivoperComponent } from './componentes/divoper/divoper.component';
+import { KEY_MAP } from './_service/var.const';
 
 @NgModule({
   declarations: [
@@ -112,7 +116,8 @@ import { CambiarClaveComponent } from './componentes/cambiar-clave/cambiar-clave
     CanalObraComponent,
     DistritoComponent,
     UsersComponent,
-    CambiarClaveComponent
+    CambiarClaveComponent,
+    DivoperComponent
   ],
   imports: [
     BrowserModule,
@@ -129,7 +134,11 @@ import { CambiarClaveComponent } from './componentes/cambiar-clave/cambiar-clave
     BsDatepickerModule.forRoot(),
     TimepickerModule.forRoot(),
     AccordionModule.forRoot(),
-    BrowserAnimationsModule
+    PaginationModule.forRoot(),
+    BrowserAnimationsModule,
+    AgmCoreModule.forRoot({
+      apiKey: KEY_MAP
+    })
   ],
   providers: [
     UnidadService,
