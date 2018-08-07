@@ -232,10 +232,25 @@
 
           <ul class="drop-menu-responsive animated fadeIn fast">
 
+<<<<<<< HEAD
             <!-- Evaluación dentro icono-->
             <li class="opcion-evaluacion-responsive desplegar-submenu" (click)="desplegar()">
               <a class="cursor-nav a-principal"><i class="fas fa-angle-down"></i>Evaluación</a>
               <ul class="drop-submenu-responsive animated fadeIn fast">
+=======
+      <!-- Sub-menu 5 -->
+      <ul *ngIf="seleccionado == 5" class="nav navbar-nav">
+        <li [routerLinkActive]="['active']">
+          <a routerLink="/solicitud-riego">Solicitud Riego</a>
+        </li>
+        <li [routerLinkActive]="['active']">
+          <a routerLink="/programacion-semanal">Programacion semanal</a>
+        </li>
+        <li [routerLinkActive]="['active']">
+          <a routerLink="/calculo-caudal-semanal">Caudal semanal</a>
+        </li>
+      </ul>
+>>>>>>> actualizaciones
 
                 <li [routerLinkActive]="['active']">
                   <a routerLink="/eficiencia-perdidas">Eficiencia/Perdidas</a>
