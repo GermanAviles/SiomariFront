@@ -63,17 +63,6 @@ input[type=text]:focus{
 }
 
 
-/* ----------------- Inputs Error ----------------------*/
-.error input[type=text]{
-  border-color: #FF5D5D;
-  box-shadow: 0 0 8px 0 #FF5D5D;
-}
-/*-----Fondo Error al icono-----*/
-.inputWithIcon.inputWithIconBg.inputWithIconBgError i{
-  background-color: #FF5D5D;
-  color: #FFFFFF;
-}
-
 /*-----------------------------------------------
               input con fondo e incono
 ----------------------------------------------- */
@@ -107,6 +96,22 @@ input[type=text]:focus{
   padding-left: 12px;
   border-radius: 4px 0px 0px 4px;
 }
+/* ----------------- Inputs Error ----------------------*/
+.error input[type=text]{
+  border-color: #FF5D5D;
+  box-shadow: 0 0 8px 0 #FF5D5D;
+}
+/*-----Fondo Error al icono-----*/
+.inputWithIcon.inputWithIconBgError i{
+  background-color: #FF5D5D;
+  color: #FFFFFF;
+  padding-top: 10px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  padding-left: 12px;
+  border-radius: 4px 0px 0px 4px;
+}
+/*---------------------*/
 .inputWithIcon.inputWithIconBg input[type=text]:focus + i{
   color: #FFFFFF;
   background-color: dodgerBlue;
