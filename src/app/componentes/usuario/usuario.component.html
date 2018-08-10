@@ -6,13 +6,13 @@
 
   <br>
 
-  <div *ngIf="estado == 1" class="alert alert-success" role="alert">
+  <div *ngIf="estado == 1" class="alert alert-success animated fadeIn fast" role="alert">
     La informacion se ha guardado correctamente.
   </div>
-  <div *ngIf="estado == 0" class="alert alert-danger" role="alert">
+  <div *ngIf="estado == 0" class="alert alert-danger animated fadeIn fast" role="alert">
     Se ha producido un error, intente mas tarde.
   </div>
-  <div *ngIf="estado == 2" class="alert alert-warning" role="alert">
+  <div *ngIf="estado == 2" class="alert alert-warning animated fadeIn fast" role="alert">
     La identificacion ya existe.
   </div>
 
@@ -40,7 +40,7 @@
 
       <div class="col-xs-6">
 
-        <div [ngClass]="(!identificacion.valid && identificacion.touched) ? 'form-group has-error error inputWithIcon inputWithIconBgError label-error' : 'form-group label-normal inputWithIcon inputWithIconBg'" >
+        <div [ngClass]="(!identificacion.valid && identificacion.touched) ? 'form-group has-error error inputWithIcon inputWithIconBgError' : 'form-group inputWithIcon inputWithIconBg'" >
           <label [ngClass]="(!identificacion.valid && identificacion.touched) ? 'label-error' : 'label-normal'"  class="animated fadeIn" for="identificacion">Identificación*</label>
           <input
             [(ngModel)]="usuario.cedula"
