@@ -55,6 +55,7 @@
 
             <li [routerLinkActive]="['active']"> <a class="cursor-nav">Canal <i class="fas fa-angle-right"></i> </a>
               <ul class="sub-menu animated fadeIn fast">
+                <!-- No existe l-->
                 <li><a routerLink="canal/registrarr">Registrar</a></li>
                 <li><a routerLink="canal/registrar">Editar</a></li>
                 <li><a routerLink="agregar/registrar">Agregar Obra</a></li>
@@ -232,25 +233,25 @@
 
           <ul class="drop-menu-responsive animated fadeIn fast">
 
-<<<<<<< HEAD
+
             <!-- Evaluación dentro icono-->
             <li class="opcion-evaluacion-responsive desplegar-submenu" (click)="desplegar()">
               <a class="cursor-nav a-principal"><i class="fas fa-angle-down"></i>Evaluación</a>
               <ul class="drop-submenu-responsive animated fadeIn fast">
-=======
-      <!-- Sub-menu 5 -->
-      <ul *ngIf="seleccionado == 5" class="nav navbar-nav">
-        <li [routerLinkActive]="['active']">
-          <a routerLink="/solicitud-riego">Solicitud Riego</a>
-        </li>
-        <li [routerLinkActive]="['active']">
-          <a routerLink="/programacion-semanal">Programacion semanal</a>
-        </li>
-        <li [routerLinkActive]="['active']">
-          <a routerLink="/calculo-caudal-semanal">Caudal semanal</a>
-        </li>
-      </ul>
->>>>>>> actualizaciones
+
+                <!-- Sub-menu 5 -->
+                <ul *ngIf="seleccionado == 5" class="nav navbar-nav">
+                  <li [routerLinkActive]="['active']">
+                    <a routerLink="/solicitud-riego">Solicitud Riego</a>
+                  </li>
+                  <li [routerLinkActive]="['active']">
+                    <a routerLink="/programacion-semanal">Programacion semanal</a>
+                  </li>
+                  <li [routerLinkActive]="['active']">
+                    <a routerLink="/calculo-caudal-semanal">Caudal semanal</a>
+                  </li>
+                </ul>
+
 
                 <li [routerLinkActive]="['active']">
                   <a routerLink="/eficiencia-perdidas">Eficiencia/Perdidas</a>
