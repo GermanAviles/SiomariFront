@@ -16,6 +16,14 @@ div label.label-normal {
 div label.label-error{
   color: #FF5D5D;
 }
+div.cont_btns{
+  margin-left:330px;
+  width: 100%
+}
+button.btn_general{
+  width: 33%;
+  margin-right: 10px;
+}
 button.btn-guardar{
   margin-left: 260px;
   position: relative;
