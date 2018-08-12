@@ -22,14 +22,15 @@ button.btn-guardar{
   width: 100%;
 }
 div.cont-btns{
-  margin-left: 220px;
+  margin-left: 225px;
 }
-.btn-guardar{
-  width: 30%;
-  margin-left: 250px;
+button.btn-guardar{
+  width: 33%;
+  margin-left: 85px;
 }
 .btn-general{
-  width: 30%;
+  width: 28%;
+  margin-left: 10px;
 }
 .contenedor-form{
   border: 1.5px solid #3B9AC1;

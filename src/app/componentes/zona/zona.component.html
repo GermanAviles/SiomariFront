@@ -54,7 +54,7 @@
         <i class="fas fa-ban fa-fw"></i> Cancelar
       </button>
       <!-- [ngClass]="(edicion)? 'btn btn-primary btn-general': 'btn-guardar'" -->
-      <button type="submit" class="btn btn-primary btn-general" [disabled]="!form.form.valid || unidadId == null">
+      <button type="submit" [ngClass]="(!edicion) ? 'btn btn-primary btn-guardar' : 'btn btn-primary btn-general'" [disabled]="!form.form.valid || unidadId == null">
         <i class="far fa-save fa-fw"></i> Guardar
       </button>
     </div>
