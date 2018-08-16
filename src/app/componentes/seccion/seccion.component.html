@@ -61,13 +61,13 @@
       <span class="msg-error" *ngIf="!nombre.valid && nombre.touched">El nombre es obligatorio</span>
     </div>
 
-    <div class="">
-      <button *ngIf="edicion" (click)="onClickCancelar()" class="btn btn-danger btn-cancelar" type="button">
+    <div class="cont_btns">
+      <button *ngIf="edicion" (click)="onClickCancelar()" class="btn btn-danger btn_general" type="button">
         <i class="fas fa-ban fa-fw"></i> Cancelar</button>
 
       <button [disabled]="!form.form.valid || zonaId == null || unidadId == null"
-                type="submit" class="btn btn-primary btn-guardar">
-        <i class="fas fa-save fa-fw"></i> Guardar</button>      
+                type="submit" [ngClass]="(!edicion) ? 'btn btn-primary btn_guardar': 'btn btn-primary btn_general'">
+        <i class="fas fa-save fa-fw"></i> Guardar</button>
     </div>
 
   </form>

@@ -1,13 +1,15 @@
-<div>
-  <h1>Balance</h1>
+<div class="contenedor-principal animated fadeIn">
+  <h1 class="Titutlo_form animated fadeIn fast">Balance</h1>
 
   <br/>
 
   <ng4-loading-spinner> </ng4-loading-spinner>
 
-  <div *ngIf="estado == 0" class="alert alert-danger" role="alert">
+  <div *ngIf="estado == 0" class="alert alert-danger animated fadeIn fast" role="alert">
     Ha ocurrido un error, intenta mas tarde.
   </div>
+<div class="contenedor-form">
+
 
   <form (ngSubmit)="consultar()" class="form-inline">
 
@@ -23,7 +25,9 @@
       <option value="A">A</option>
       <option value="B">B</option>
     </select>
-    <button [disabled]="!cYear.valid || !cCampania.valid || idUnidad == 0" type="submit" class="btn btn-primary mb-2">Consultar</button>
+    <button [disabled]="!cYear.valid || !cCampania.valid || idUnidad == 0" type="submit" class="btn btn-primary mb-2">
+      Consultar
+    </button>
 
   </form>
 
@@ -77,5 +81,5 @@
       </ng-container>
     </tbody>
   </table>
-
+</div>
 </div>

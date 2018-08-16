@@ -24,8 +24,8 @@ button.btn_general{
   width: 33%;
   margin-right: 10px;
 }
-button.btn-guardar{
-  margin-left: 260px;
+button.btn_guardar{
+  margin-left: -80px;
   position: relative;
   width: 100%;
 }
@@ -112,12 +112,12 @@ input[type=text]:focus{
 }
 /* ----------------- Inputs Error ----------------------*/
 .error input[type=text]{
-  border-color: #FF5D5D;
-  box-shadow: 0 0 8px 0 #FF5D5D;
+  border-color: #B44141;
+  box-shadow: 0 0 8px 0 #B44141;
 }
 .error input[type=number]{
-  border-color: #FF5D5D;
-  box-shadow: 0 0 8px 0 #FF5D5D;
+  border-color: #B44141;
+  box-shadow: 0 0 8px 0 #B44141;
 }
 /*-----Fondo Error al icono-----*/
 .inputWithIcon.inputWithIconBgError i{

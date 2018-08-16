@@ -92,7 +92,7 @@
         </div>
 
         <div class="cont_btns">
-          <button type="submit" [disabled]="!form.form.valid" [ngClass]="(!edicion) ? 'btn-guardar': 'btn btn-primary btn_general'">
+          <button [ngClass]="(!edicion) ? 'btn btn-primary btn_guardar': 'btn btn-primary btn_general'" type="submit" [disabled]="!form.form.valid" >
             <i class="far fa-save fa-fw"></i> Guardar
           </button>
           <button *ngIf="edicion" (click)="onClickCancelar()" class="btn btn-danger btn_general" type="button">

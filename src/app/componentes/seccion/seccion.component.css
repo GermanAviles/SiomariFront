@@ -16,14 +16,18 @@ div label.label-normal {
 div label.label-error{
   color: #B44141;
 }
-button.btn-guardar{  
-  position: relative;
-  width: 20%;
+div.cont_btns{
+  margin-left:250px;
+  width: 100%
 }
-button.btn-cancelar{
-  margin-left: 250px;
+button.btn_general{
   width: 20%;
+  margin-right: 10px;
+}
+button.btn_guardar{
+  margin-left: -45px;
   position: relative;
+  width: 33%;
 }
 .contenedor-form{
   border: 1.5px solid #3B9AC1;
