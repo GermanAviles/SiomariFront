@@ -20,8 +20,7 @@
         <div [ngClass]="(cFecha.invalid && cFecha.touched) ? 'form-group has-error' : 'form-group'">
           <label class="control-label">Fecha y hora de entrega</label>
           <input [(ngModel)]="rango" #cFecha="ngModel" name="cFecha" type="text" class="form-control" #drp="bsDaterangepicker" bsDaterangepicker
-            [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY', containerClass: 'theme-blue' }" required placeholder="Ingrese la fecha de entrega"
-          />
+            [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY', containerClass: 'theme-blue' }" required placeholder="Ingrese la fecha de entrega"/>
           <span class="msg-error" *ngIf="cFecha.invalid && cFecha.touched">Campo obligatorio</span>
         </div>
 
