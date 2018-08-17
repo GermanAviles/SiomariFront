@@ -1,124 +1,125 @@
-<div class="col-xs-12">
+<div class="col-xs-12 contenedor-principal animated fadeIn fast">
 
-  <h2>Consulta de predios</h2>
+  <h2 class="Titutlo_form animated fadeIn">Consulta de predios</h2>
 
-  <br>
+<div class="contenedor-form animated fadeIn fast">
+    <ng4-loading-spinner> </ng4-loading-spinner>
 
-  <ng4-loading-spinner> </ng4-loading-spinner>
+    <div *ngIf="estado == 0" class="alert alert-danger animated fadeIn fast" role="alert">
+      Se ha producido un error, intente mas tarde.
+    </div>
 
-  <div *ngIf="estado == 0" class="alert alert-danger" role="alert">
-    Se ha producido un error, intente mas tarde.
-  </div>
+    <div class="row">
+      <form class="col-xs-6">
+        <div class="form-group">
+          <label class="label-normal animated fadeIn fast">Buscar predio</label>
+          <ng2-completer [inputClass]="['form-control']" [datasource]="dataServicePredio" [minSearchLength]="3" [textSearching]="'Buscando...'"
+            [placeholder]="'Buscar por nombre o código'" [textNoResults]="'Sin resultados'" (selected)="onPredioSelect($event)"
+            [(ngModel)]="searchPredio" name="cPredio" required [clearUnselected]=true></ng2-completer>
+        </div>
+      </form>
+    </div>
 
-  <div class="row">
-    <form class="col-xs-6">
-      <div class="form-group">
-        <label>Buscar predio</label>
-        <ng2-completer [inputClass]="['form-control']" [datasource]="dataServicePredio" [minSearchLength]="3" [textSearching]="'Buscando...'"
-          [placeholder]="'Buscar por nombre o código'" [textNoResults]="'Sin resultados'" (selected)="onPredioSelect($event)"
-          [(ngModel)]="searchPredio" name="cPredio" required [clearUnselected]=true></ng2-completer>
-      </div>
-    </form>
-  </div>
+    <form *ngIf="consultado">
 
-  <form *ngIf="consultado">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Información del predio</h3>
+        </div>
+        <div class="panel-body">
 
-    <div class="panel panel-info">
-      <div class="panel-heading">
-        <h3 class="panel-title">Información del predio</h3>
-      </div>
-      <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-6">
 
-        <div class="row">
-          <div class="col-xs-6">
+              <div class="form-group">
+                <label class="label-normal animated fadeIn">Código</label>
+                <input [(ngModel)]="predio.codigo" name="codigo" type="text" class="form-control" readonly/>
+              </div>
 
-            <div class="form-group">
-              <label>Código</label>
-              <input [(ngModel)]="predio.codigo" name="codigo" type="text" class="form-control" readonly/>
+              <div class="form-group">
+                <label class="label-normal animated fadeIn">Nombre del predio</label>
+                <input [(ngModel)]="predio.nombre" name="nombre" type="text" class="form-control" readonly/>
+              </div>
+
+              <div class="form-group">
+                <label class="label-normal animated fadeIn">Nombre del propietario</label>
+                <input [(ngModel)]="predio.nombrePropietario" name="nombrePropietario" type="text" class="form-control" readonly/>
+              </div>
+
+              <div class="form-group">
+                <label class="label-normal animated fadeIn">Nombre del usuario</label>
+                <input [(ngModel)]="predio.nombreUsuario" name="nombreUsuario" type="text" class="form-control" readonly/>
+              </div>
+
+              <div class="form-group">
+                <label class="label-normal animated fadeIn">Área potencial de riego (ha)</label>
+                <input [(ngModel)]="predio.areaPotencialRiego" name="areaPR" type="number" class="form-control" readonly/>
+              </div>
+
+              <div class="form-group">
+                <label class="label-normal animated fadeIn">Área bajo riego (ha)</label>
+                <input [(ngModel)]="predio.areaBajoRiego" name="areaBajoRiego" type="number" class="form-control" readonly/>
+              </div>
+
             </div>
 
-            <div class="form-group">
-              <label>Nombre del predio</label>
-              <input [(ngModel)]="predio.nombre" name="nombre" type="text" class="form-control" readonly/>
-            </div>
+            <div class="col-xs-6">
 
-            <div class="form-group">
-              <label>Nombre del propietario</label>
-              <input [(ngModel)]="predio.nombrePropietario" name="nombrePropietario" type="text" class="form-control" readonly/>
-            </div>
+              <div class="form-group">
+                <label class="label-normal animated fadeIn">Área total (ha)</label>
+                <input [(ngModel)]="predio.areaTotal" name="areaTotal" type="number" class="form-control" readonly/>
+              </div>
 
-            <div class="form-group">
-              <label>Nombre del usuario</label>
-              <input [(ngModel)]="predio.nombreUsuario" name="nombreUsuario" type="text" class="form-control" readonly/>
-            </div>
+              <div class="form-group">
+                <label class="label-normal animated fadeIn">Modulo de riego (L/s)</label>
+                <input [(ngModel)]="predio.moduloRiego" name="moduloRiego" type="number" class="form-control" readonly/>
+              </div>
 
-            <div class="form-group">
-              <label>Área potencial de riego (ha)</label>
-              <input [(ngModel)]="predio.areaPotencialRiego" name="areaPR" type="number" class="form-control" readonly/>
-            </div>
+              <div class="form-group">
+                <label class="label-normal animated fadeIn">Cantidad de tomas</label>
+                <input [(ngModel)]="predio.numeroTomas" name="numeroTomas" type="number" class="form-control" readonly/>
+              </div>
 
-            <div class="form-group">
-              <label>Área bajo riego (ha)</label>
-              <input [(ngModel)]="predio.areaBajoRiego" name="areaBajoRiego" type="number" class="form-control" readonly/>
-            </div>
+              <div class="form-group">
+                <label class="label-normal animated fadeIn">Tipo de suelo</label>
+                <input [(ngModel)]="predio.tipoSuelo" name="tipoSuelo" type="text" class="form-control" readonly/>
+              </div>
 
-          </div>
+              <div class="form-group">
+                <label class="label-normal animated fadeIn">Canal servidor</label>
+                <input [(ngModel)]="predio.canalId.nombre" name="canalServidor" type="text" class="form-control" readonly/>
+              </div>
 
-          <div class="col-xs-6">
+              <div *ngIf="predio.x != null && predio.y != null" class="form-group">
+                <label class="label-normal animated fadeIn">Coordenadas cartesianas
+                  <button class="btn btn-success btn-xs" (click)="georreferenciacion(templateMapa)">Georreferenciación</button>
+                </label>
+                <input value="( {{predio.x}}, {{predio.y}}, {{predio.altitud}} )" name="latitud" class="form-control" type="text" readonly/>
+              </div>
 
-            <div class="form-group">
-              <label>Área total (ha)</label>
-              <input [(ngModel)]="predio.areaTotal" name="areaTotal" type="number" class="form-control" readonly/>
-            </div>
-
-            <div class="form-group">
-              <label>Modulo de riego (L/s)</label>
-              <input [(ngModel)]="predio.moduloRiego" name="moduloRiego" type="number" class="form-control" readonly/>
-            </div>
-
-            <div class="form-group">
-              <label>Cantidad de tomas</label>
-              <input [(ngModel)]="predio.numeroTomas" name="numeroTomas" type="number" class="form-control" readonly/>
-            </div>
-
-            <div class="form-group">
-              <label>Tipo de suelo</label>
-              <input [(ngModel)]="predio.tipoSuelo" name="tipoSuelo" type="text" class="form-control" readonly/>
-            </div>
-
-            <div class="form-group">
-              <label>Canal servidor</label>
-              <input [(ngModel)]="predio.canalId.nombre" name="canalServidor" type="text" class="form-control" readonly/>
-            </div>
-
-            <div *ngIf="predio.x != null && predio.y != null" class="form-group">
-              <label>Coordenadas cartesianas
-                <button class="btn btn-success btn-xs" (click)="georreferenciacion(templateMapa)">Georreferenciación</button>
-              </label>
-              <input value="( {{predio.x}}, {{predio.y}}, {{predio.altitud}} )" name="latitud" class="form-control" type="text" readonly/>
             </div>
 
           </div>
 
         </div>
-
       </div>
-    </div>
 
 
-  </form>
-</div>
-
-<ng-template #templateMapa>
-  <div class="modal-body">
-    <agm-map style="width: 100%; height: 500px;" [mapTypeId]="'satellite'" [latitude]="predio.x" [longitude]="predio.y" [zoom]="16">
-      <agm-marker [latitude]="predio.x" [longitude]="predio.y">
-        <agm-info-window>
-          <p>
-            <b>{{predio.nombre}}</b>
-          </p>
-        </agm-info-window>
-      </agm-marker>
-    </agm-map>
+    </form>
   </div>
-</ng-template>
+
+  <ng-template #templateMapa>
+    <div class="modal-body">
+      <agm-map style="width: 100%; height: 500px;" [mapTypeId]="'satellite'" [latitude]="predio.x" [longitude]="predio.y" [zoom]="16">
+        <agm-marker [latitude]="predio.x" [longitude]="predio.y">
+          <agm-info-window>
+            <p>
+              <b>{{predio.nombre}}</b>
+            </p>
+          </agm-info-window>
+        </agm-marker>
+      </agm-map>
+    </div>
+  </ng-template>
+
+</div>
