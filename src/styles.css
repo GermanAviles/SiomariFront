@@ -5,9 +5,11 @@
 body.cont-body {
     padding-top: 70px;
     margin-bottom: 20px;
-    /*background-color: #F5F5F5;*/
+    background-color: #F5F5F5;
     background-image: url("./assets/img/fondo_principal.jpg");
     background-repeat: no-repeat;
+    background-attachment: fixed; /* el fondo permanecerá fijo */
+   /*background: url("./assets/img/flat-lay-2583213_1920.jpg") no-repeat fixed*/ /*Esto es lo mismo que lo anterior pero con una superpropiedad */
 }
 
 .pointer {
