@@ -49,11 +49,11 @@ export class HeaderComponent implements OnInit {
     sessionStorage.clear();
     this.router.navigate(['login']);
   }
-
+/*
   desplegar(){
       $(".desplegar-submenu").click(function(){
         $(this).children("ul").toggle();
       });
   }
-
+*/
 }
