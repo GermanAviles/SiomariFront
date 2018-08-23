@@ -1,4 +1,4 @@
-<div *ngIf="isAuthenticated()" class="navbar navbar-default navbar-fixed-top main-container">
+<div *ngIf="isAuthenticated()" class="navbar navbar-default navbar-fixed-top main-container navbar-container">
 
   <div class="container-fluid">
     <div class="nav-header">
@@ -226,20 +226,20 @@
 
           </ul>
         </li>
-
-        <!-- ICONO RESPONSIVE -->
+<!--
+         ICONO RESPONSIVE
         <li class="opcion-menu-responsive desplegar-menu">
           <a class="cursor-nav a-principal"><i class="fas fa-bars"></i></a>
 
           <ul class="drop-menu-responsive animated fadeIn fast">
 
 
-            <!-- Evaluación dentro icono-->
+           Evaluación dentro icono
             <li class="opcion-evaluacion-responsive desplegar-submenu" >
               <a class="cursor-nav a-principal"><i class="fas fa-angle-down"></i>Evaluación</a>
               <ul class="drop-submenu-responsive animated fadeIn fast">
 
-                <!-- Sub-menu 5 -->
+                 Sub-menu 5
                 <ul *ngIf="seleccionado == 5" class="nav navbar-nav">
                   <li [routerLinkActive]="['active']">
                     <a routerLink="/solicitud-riego">Solicitud Riego</a>
@@ -260,7 +260,7 @@
               </ul>
             </li>
 
-            <!-- Consultas dentro icono-->
+         Consultas dentro icono
             <li class="opcion-consultas-responsive desplegar-submenu" >
               <a class="cursor-nav a-principal"><i class="fas fa-angle-down"></i>Consultas</a>
               <ul class="drop-submenu-responsive animated fadeIn fast">
@@ -288,9 +288,9 @@
               </ul>
             </li>
 
-            <!-- Cuenta dentro icono-->
+            Cuenta dentro icono
             <li class="opcion-cuenta-responsive desplegar-submenu" >
-              <a class="cursor-nav a-principal"><i class="fas fa-angle-down"></i>Cuenta <!--<i class="fas fa-cog"></i>--> </a>
+              <a class="cursor-nav a-principal"><i class="fas fa-angle-down"></i>Cuenta <i class="fas fa-cog"></i> </a>
               <ul class="drop-submenu-responsive animated fadeIn fast">
 
                 <li [routerLinkActive]="['active']" class="dropdown-cuenta">
@@ -315,7 +315,7 @@
           </ul>
 
         </li>
-
+-->
 
       </ul>
     </div>

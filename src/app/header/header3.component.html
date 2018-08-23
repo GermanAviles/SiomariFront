@@ -1,54 +1,324 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<div *ngIf="isAuthenticated()" class="navbar navbar-default navbar-fixed-top main-container">
+
   <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Project name</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Settings</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Help</a></li>
-      </ul>
-      <form class="navbar-form navbar-right">
-        <input type="text" class="form-control" placeholder="Search...">
-      </form>
-    </div>
-  </div>
-</nav>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-3 col-md-2 sidebar">
-      <ul class="nav nav-sidebar">
-        <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Reports</a></li>
-        <li><a href="#">Analytics</a></li>
-        <li><a href="#">Export</a></li>
-      </ul>
-      <ul class="nav nav-sidebar">
-        <li><a href="">Nav item</a></li>
-        <li><a href="">Nav item again</a></li>
-        <li><a href="">One more nav</a></li>
-        <li><a href="">Another nav item</a></li>
-        <li><a href="">More navigation</a></li>
-      </ul>
-      <ul class="nav nav-sidebar">
-        <li><a href="">Nav item again</a></li>
-        <li><a href="">One more nav</a></li>
-        <li><a href="">Another nav item</a></li>
-      </ul>
+    <div class="nav-header">
+      <a [routerLink]="['/home']" class="navbar-brand Titulo-navbar">SIOMARI</a>
     </div>
 
-    <!-- Content -->
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-      
+    <div class="collapse navbar-collapse navClass">
+      <ul class="nav navbar-nav">
+
+        <!-- Registro -->
+        <li class="opcion-registro">
+          <a class="cursor-nav a-principal">Registro <i class="fas fa-angle-down"></i></a>
+          <ul class="drop-menu animated fadeIn fast">
+            <li [routerLinkActive]="['active']"> <a class="cursor-nav">Predio <i class="fas fa-angle-right"></i> </a>
+              <ul class="sub-menu animated fadeIn fast">
+                <li><a routerLink="predio/registrar">Registrar</a></li>
+                <li><a routerLink="predio/editar">Editar</a></li>
+              </ul>
+            </li>
+            <li [routerLinkActive]="['active']" class=""> <a class="cursor-nav">Usuario <i class="fas fa-angle-right"></i></a>
+              <ul class="sub-menu animated fadeIn fast">
+                <li> <a [routerLink]="['usuario/registrar']">Registrar</a> </li>
+                <li> <a [routerLink]="['usuario/editar']">Editar</a> </li>
+              </ul>
+            </li>
+          </ul>
+
+        </li>
+        <!-- Estroper -->
+        <li class="opcion-estroper">
+          <a class="cursor-nav a-principal">Estroper <i class="fas fa-angle-down"></i></a>
+          <ul class="drop-menu animated fadeIn fast">
+
+            <li [routerLinkActive]="['active']"> <a class="cursor-nav">Unidad <i class="fas fa-angle-right"></i> </a>
+              <ul class="sub-menu animated fadeIn fast">
+                <li><a routerLink="unidad/registrar">Registrar</a></li>
+                <li><a routerLink="unidad/editar">Editar</a></li>
+              </ul>
+            </li>
+
+            <li [routerLinkActive]="['active']"> <a class="cursor-nav">Zona <i class="fas fa-angle-right"></i> </a>
+              <ul class="sub-menu animated fadeIn fast">
+                <li><a routerLink="zona/registrar">Registrar</a></li>
+                <li><a routerLink="zona/editar">Editar</a></li>
+              </ul>
+            </li>
+
+            <li [routerLinkActive]="['active']"> <a class="cursor-nav">Sección <i class="fas fa-angle-right"></i> </a>
+              <ul class="sub-menu animated fadeIn fast">
+                <li><a routerLink="seccion/registrar">Registrar</a></li>
+                <li><a routerLink="seccion/editar">Editar</a></li>
+              </ul>
+            </li>
+
+            <li [routerLinkActive]="['active']"> <a class="cursor-nav">Canal <i class="fas fa-angle-right"></i> </a>
+              <ul class="sub-menu animated fadeIn fast">
+                <!-- no existe la ruta para agregar canal ni registrar canal-->
+                <li><a routerLink="canal/registrarr">Registrar</a></li>
+                <li><a routerLink="canal/registrar">Editar</a></li>
+                <li><a routerLink="agregar/registrar">Agregar Obra</a></li>
+              </ul>
+            </li>
+
+            <li [routerLinkActive]="['active']"> <a class="cursor-nav">cultivo <i class="fas fa-angle-right"></i> </a>
+              <ul class="sub-menu animated fadeIn fast">
+                <li><a routerLink="cultivo/registrar">Registrar</a></li>
+                <li><a routerLink="cultivo/editar">Editar</a></li>
+              </ul>
+            </li>
+
+            <li [routerLinkActive]="['active']"> <a class="cursor-nav">Obra <i class="fas fa-angle-right"></i> </a>
+              <ul class="sub-menu animated fadeIn fast">
+                <li><a routerLink="obra/registrar">Registrar</a></li>
+                <li><a routerLink="obra/editar">Editar</a></li>
+              </ul>
+            </li>
+
+            <li [routerLinkActive]="['active']">
+              <a class="cursor-nav" routerLink="/establecer-servidores">Servidores</a>
+            </li>
+
+          </ul>
+        </li>
+
+        <!-- Hidrometría -->
+        <li class="opcion-hidrometria">
+          <a class="cursor-nav a-principal">
+            Hidrometría <i class="fas fa-angle-down"></i>
+          </a>
+          <ul class="drop-menu animated fadeIn fast">
+            <li [routerLinkActive]="['active']">
+              <a class="cursor-nav" routerLink="/estructura-control">
+                 Estructura de control</a>
+            </li>
+          </ul>
+        </li>
+
+
+        <!-- Planeación -->
+        <li class="opcion-planeacion">
+          <a class="cursor-nav a-principal">Planeación <i class="fas fa-angle-down"></i></a>
+          <ul class="drop-menu animated fadeIn fast">
+
+            <li [routerLinkActive]="['active']">
+              <a class="cursor-nav" routerLink="/plan-siembra">
+                Solicitud de siembra </a>
+            </li>
+
+            <li [routerLinkActive]="['active']" class="">
+              <a class="cursor-nav" routerLink="/plan-siembra-info">
+                Plan de siembra </a>
+            </li>
+
+            <li [routerLinkActive]="['active']" class="">
+              <a class="cursor-nav" routerLink="/balance"> Balance </a>
+            </li>
+
+            <li [routerLinkActive]="['active']" class="">
+              <a class="cursor-nav" routerLink="/climatologia"> Climatología </a>
+            </li>
+
+            <li [routerLinkActive]="['active']" class="">
+              <a class="cursor-nav" routerLink="/config"> Condeplan </a>
+            </li>
+
+          </ul>
+        </li>
+
+        <!-- Programación -->
+        <li class="opcion-programacion">
+          <a class="cursor-nav a-principal">Programación <i class="fas fa-angle-down"></i></a>
+          <ul class="drop-menu animated fadeIn fast">
+
+            <li [routerLinkActive]="['active']">
+              <a routerLink="/programacion-semanal">Programacion semanal</a>
+            </li>
+
+            <li [routerLinkActive]="['active']">
+              <a routerLink="/calculo-caudal-semanal">Caudal semanal</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Distribución -->
+        <li class="opcion-distribucion">
+          <a class="cursor-nav a-principal">Distribución <i class="fas fa-angle-down"></i></a>
+          <ul class="drop-menu animated fadeIn fast">
+
+            <li [routerLinkActive]="['active']">
+              <a routerLink="/registro-manejo-agua">Registro de manejo de agua</a>
+            </li>
+
+            <li [routerLinkActive]="['active']">
+              <a routerLink="/registro-manejo-grafica">Grafica de manejo de agua</a>
+            </li>
+
+          </ul>
+        </li>
+
+        <!-- Entregas -->
+        <li class="opcion-entregas">
+          <a class="cursor-nav a-principal" routerLink="/entrega">Entregas</a>
+        </li>
+
+        <!-- Evaluación -->
+        <li class="opcion-evaluacion opcion-ocultar">
+          <a class="cursor-nav a-principal">Evaluación <i class="fas fa-angle-down"></i></a>
+          <ul class="drop-menu animated fadeIn fast">
+
+            <li [routerLinkActive]="['active']">
+              <a routerLink="/eficiencia-perdidas">Eficiencia/Perdidas</a>
+            </li>
+
+          </ul>
+        </li>
+
+        <!-- Consultas -->
+        <li class="opcion-consultas opcion-ocultar">
+          <a class="cursor-nav a-principal">Consultas <i class="fas fa-angle-down"></i></a>
+          <ul class="drop-menu animated fadeIn fast">
+
+            <li [routerLinkActive]="['active']">
+              <a routerLink="/reporte/caudalServido">Facturación</a>
+            </li>
+
+            <li [routerLinkActive]="['active']">
+              <a routerLink="consulta/usuario">RGU</a>
+            </li>
+
+            <li [routerLinkActive]="['active']">
+              <a routerLink="consulta/predio">RGP</a>
+            </li>
+
+            <li [routerLinkActive]="['active']">
+              <a routerLink="consulta/canal">Canal</a>
+            </li>
+
+            <li [routerLinkActive]="['active']">
+              <a routerLink="distribucion-agua-mensual">Distribución de agua</a>
+            </li>
+
+          </ul>
+        </li>
+
+        <!-- Cuenta -->
+        <li class="opcion-cuentas">
+          <a class="cursor-nav a-principal">Cuenta <i class="fas fa-angle-down"></i> <!--<i class="fas fa-cog"></i>--> </a>
+          <ul class="drop-menu drop-menu-cuenta animated fadeIn fast">
+
+            <li [routerLinkActive]="['active']" class="dropdown-cuenta">
+              <a routerLink="/cuenta/registrar">Crear</a>
+            </li>
+
+            <li [routerLinkActive]="['active']" class="dropdown-cuenta">
+              <a routerLink="/cuenta/editar">Actualizar</a>
+            </li>
+
+            <li [routerLinkActive]="['active']" class="dropdown-cuenta">
+              <a routerLink="/cambiar-clave">Cambiar contraseña</a>
+            </li>
+
+            <li (click)="cerrarSesion()" class="dropdown-cuenta">
+              <a class="cursor-nav a-principal" (click)="cerrarSesion()">Cerrar sesión</a>
+            </li>
+
+          </ul>
+        </li>
+
+        <!-- ICONO RESPONSIVE -->
+        <li class="opcion-menu-responsive desplegar-menu">
+          <a class="cursor-nav a-principal"><i class="fas fa-bars"></i></a>
+
+          <ul class="drop-menu-responsive animated fadeIn fast">
+
+
+            <!-- Evaluación dentro icono-->
+            <li class="opcion-evaluacion-responsive desplegar-submenu" >
+              <a class="cursor-nav a-principal"><i class="fas fa-angle-down"></i>Evaluación</a>
+              <ul class="drop-submenu-responsive animated fadeIn fast">
+
+                <!-- Sub-menu 5 -->
+                <ul *ngIf="seleccionado == 5" class="nav navbar-nav">
+                  <li [routerLinkActive]="['active']">
+                    <a routerLink="/solicitud-riego">Solicitud Riego</a>
+                  </li>
+                  <li [routerLinkActive]="['active']">
+                    <a routerLink="/programacion-semanal">Programacion semanal</a>
+                  </li>
+                  <li [routerLinkActive]="['active']">
+                    <a routerLink="/calculo-caudal-semanal">Caudal semanal</a>
+                  </li>
+                </ul>
+
+
+                <li [routerLinkActive]="['active']">
+                  <a routerLink="/eficiencia-perdidas">Eficiencia/Perdidas</a>
+                </li>
+
+              </ul>
+            </li>
+
+            <!-- Consultas dentro icono-->
+            <li class="opcion-consultas-responsive desplegar-submenu" >
+              <a class="cursor-nav a-principal"><i class="fas fa-angle-down"></i>Consultas</a>
+              <ul class="drop-submenu-responsive animated fadeIn fast">
+
+                <li [routerLinkActive]="['active']">
+                  <a routerLink="/reporte/caudalServido">Facturación</a>
+                </li>
+
+                <li [routerLinkActive]="['active']">
+                  <a routerLink="consulta/usuario">RGU</a>
+                </li>
+
+                <li [routerLinkActive]="['active']">
+                  <a routerLink="consulta/predio">RGP</a>
+                </li>
+
+                <li [routerLinkActive]="['active']">
+                  <a routerLink="consulta/canal">Canal</a>
+                </li>
+
+                <li [routerLinkActive]="['active']">
+                  <a routerLink="distribucion-agua-mensual">Distribución de agua</a>
+                </li>
+
+              </ul>
+            </li>
+
+            <!-- Cuenta dentro icono-->
+            <li class="opcion-cuenta-responsive desplegar-submenu" >
+              <a class="cursor-nav a-principal"><i class="fas fa-angle-down"></i>Cuenta <!--<i class="fas fa-cog"></i>--> </a>
+              <ul class="drop-submenu-responsive animated fadeIn fast">
+
+                <li [routerLinkActive]="['active']" class="dropdown-cuenta">
+                  <a routerLink="/cuenta/registrar">Crear</a>
+                </li>
+
+                <li [routerLinkActive]="['active']" class="dropdown-cuenta">
+                  <a routerLink="/cuenta/editar">Actualizar</a>
+                </li>
+
+                <li [routerLinkActive]="['active']" class="dropdown-cuenta">
+                  <a routerLink="/cambiar-clave">Cambiar contraseña</a>
+                </li>
+
+                <li (click)="cerrarSesion()" class="dropdown-cuenta">
+                  <a class="cursor-nav a-principal" (click)="cerrarSesion()">Cerrar sesión</a>
+                </li>
+
+              </ul>
+            </li>
+
+          </ul>
+
+        </li>
+
+
+      </ul>
     </div>
   </div>
+
 </div>

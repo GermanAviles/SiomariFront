@@ -14,6 +14,10 @@ div > a.Titulo-navbar{
 li > a.a-principal{
   color: #FFFFFF;
 }
+div.main-container{
+    display: flex;
+    flex-flow: row wrap;
+  }
 /*----------------------------------------------
                 Menu Desplegable
 ------------------------------------------------*/
@@ -103,7 +107,7 @@ ul.drop-menu li a{
 @media (min-width: 1080px) and (min-height: 720px){
 
   /* ocultamos las siguientes opciones del navbar */
-  .navClass ul li.opcion-cuentas{
+  /*.navClass ul li.opcion-cuentas{
     display: none;
   }
   .navClass ul li.opcion-consultas{
@@ -111,7 +115,7 @@ ul.drop-menu li a{
   }
   .navClass ul li.opcion-evaluacion{
     display: none ;
-  }
+  }*/
   /* padding de todo el navbar*/
   div.main-container{
     padding-left: 135px;
@@ -215,7 +219,7 @@ ul.drop-menu li a{
 /*--------------------- ---------------------------------------------
       monitores minimo de 1280px*720px maximo 1215px
 --------------------- -----------------------------------------------*/
-@media (min-width: 1280px) and (min-height: 720px) {
+/*@media (min-width: 1280px) and (min-height: 720px) {
   div.nav-header>a{
     margin: 0px 0px 0px -107px;
   }
@@ -236,21 +240,21 @@ ul.drop-menu li a{
     display: block;
   }
   /* desplegar primer menú */
-  .navClass ul li:hover > ul{
+  /*.navClass ul li:hover > ul{
       display: block;
       color:#FFFFFF;
   }
   /* color de cada opcion del menú cuando el mouse pasa por encima*/
-  ul.drop-menu li:hover{
+/*  ul.drop-menu li:hover{
       background-color: #3B9AC1 !important;
   }
 
   /* desplegar los subMenus */
-  .navClass ul li ul li:hover > ul{
+/*  .navClass ul li ul li:hover > ul{
       display: block;
   }
   /* color y fondo de los subMenu */
-  .navClass ul li ul li:hover > ul li:hover{
+/*  .navClass ul li ul li:hover > ul li:hover{
       background-color: #42AEDA !important;
       color: #FFFFFF;
   }
@@ -260,10 +264,10 @@ ul.drop-menu li a{
 /*--------------------- ---------------------------------------------------
         monitores de 1366px*720px minimo
 --------------------- -----------------------------------------------------*/
-@media (min-width: 1366px) and (min-height: 720px) {
+/*@media (min-width: 1366px) and (min-height: 720px) {
 
   /* ubicacion de los elementos del navbar */
-  div.nav-header>a{
+/*  div.nav-header>a{
     margin: 0px 0px 0px -108px;
   }
   div.main-container{
@@ -271,21 +275,21 @@ ul.drop-menu li a{
   }
 
   /* desplegar primer menú */
-  .navClass ul li:hover > ul{
+  /*.navClass ul li:hover > ul{
       display: block;
       color:#FFFFFF;
   }
   /* color de cada opcion del menú cuando el mouse pasa por encima*/
-  ul.drop-menu li:hover{
+  /*ul.drop-menu li:hover{
       background-color: #3B9AC1 !important;
   }
 
   /* desplegar los subMenus */
-  .navClass ul li ul li:hover > ul{
+  /*.navClass ul li ul li:hover > ul{
       display: block;
   }
   /* color y fondo de los subMenu */
-  .navClass ul li ul li:hover > ul li:hover{
+  /*.navClass ul li ul li:hover > ul li:hover{
       background-color: #42AEDA !important;
       color: #FFFFFF;
   }
@@ -295,27 +299,27 @@ ul.drop-menu li a{
 /*-----------------------------------------------------
         monitores de 1600px*720px minimo
 -------------------------------------------------------*/
-@media (min-width: 1600px) and (min-height: 720px) {
+/*@media (min-width: 1600px) and (min-height: 720px) {
 
   div.main-container{
     padding-left: 290px;
   }
   /* desplegar primer menú */
-  .navClass ul li:hover > ul{
+/*  .navClass ul li:hover > ul{
       display: block;
       color:#FFFFFF;
   }
   /* color de cada opcion del menú cuando el mouse pasa por encima*/
-  ul.drop-menu li:hover{
+/*  ul.drop-menu li:hover{
       background-color: #3B9AC1 !important;
   }
 
   /* desplegar los subMenus */
-  .navClass ul li ul li:hover > ul{
+  /*.navClass ul li ul li:hover > ul{
       display: block;
   }
   /* color y fondo de los subMenu */
-  .navClass ul li ul li:hover > ul li:hover{
+  /*.navClass ul li ul li:hover > ul li:hover{
       background-color: #42AEDA !important;
       color: #FFFFFF;
   }
@@ -325,29 +329,29 @@ ul.drop-menu li a{
 /*-----------------------------------------------------
         monitores 1920px*720px minimo
 -------------------------------------------------------*/
-@media (min-width: 1920px) and (min-height: 720px) {
+/*@media (min-width: 1920px) and (min-height: 720px) {
 
   div.main-container{
-    padding-left: 450px;
+    padding-left: 0px;
   }
   /* desplegar primer menú */
-  .navClass ul li:hover > ul{
+/*.navClass ul li:hover > ul{
       display: block;
       color:#FFFFFF;
   }
   /* color de cada opcion del menú cuando el mouse pasa por encima*/
-  ul.drop-menu li:hover{
+  /*ul.drop-menu li:hover{
       background-color: #3B9AC1 !important;
   }
 
   /* desplegar los subMenus */
-  .navClass ul li ul li:hover > ul{
+  /*.navClass ul li ul li:hover > ul{
       display: block;
   }
   /* color y fondo de los subMenu */
-  .navClass ul li ul li:hover > ul li:hover{
+  /*.navClass ul li ul li:hover > ul li:hover{
       background-color: #42AEDA !important;
       color: #FFFFFF;
   }
 
-}
+}*/

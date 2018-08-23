@@ -17,7 +17,7 @@ div label.label-error{
   color: #FF5D5D;
 }
 button.btn-guardar{
-  margin-left: 15px;
+  margin-left: -35px;
   position: relative;
   width: 100%;
 }
