@@ -14,10 +14,15 @@ div > a.Titulo-navbar{
 li > a.a-principal{
   color: #FFFFFF;
 }
+/* contenedor de todo el navbar */
 div.main-container{
-    display: flex;
-    flex-flow: row wrap;
-  }
+  display: flex;
+  flex-flow: row wrap;
+  padding-left: 130px;
+}
+div.nav-header>a{
+  margin: 0px 0px 0px -107px;
+}
 /*----------------------------------------------
                 Menu Desplegable
 ------------------------------------------------*/
@@ -35,6 +40,9 @@ ul, ol{
     float: right;
     padding-right: 8px;
 }
+.navClass ul li.opcion-menu-responsive{
+  display: none;
+}
 /* Color del fondo cuando el mouse pasa sobre una de las opciones principales del navbar */
 .navClass ul li:hover{
     background-color: #42AEDA;
@@ -51,6 +59,7 @@ ul.drop-menu{
     padding-left: 0px;
     margin-left: 0px;
 }
+/* menú desplegable de cuenta*/
 ul.drop-menu-cuenta{
     display: none;
     position: absolute;
@@ -76,6 +85,14 @@ ul.drop-menu li a{
     text-decoration: none;
     color: #FFFFFF;
 }
+/* Desplegar el menu */
+.navClass ul li:hover > ul{
+  display: block;
+}
+/* color de cada opcion del menú cuando el mouse pasa por encima*/
+ul.drop-menu-responsive li:hover{
+    background-color: #3B9AC1 !important;
+}
 /*-------------------------------------
                 subMenu
 ---------------------------------------*/
@@ -97,28 +114,46 @@ ul.drop-menu li a{
     padding-top: 5px;
     padding-bottom: 5px;
 }
-/*------------------------------------------------------------------------
-                diferentes dimensiones del navbar
---------------------------------------------------------------------------*/
+/* espacion de los li al texto */
+ul.drop-submenu-responsive li{
+  padding-right: 30px;
+}
+
+/* color y fondo de los subMenu */
+.navClass ul li ul li:hover > ul li:hover{
+    background-color: #42AEDA !important;
+}
+/* color de cada opcion del menú cuando el mouse pasa por encima*/
+ul.drop-menu li:hover{
+    background-color: #3B9AC1 !important;
+}
+
+/* desplegar los subMenus */
+.navClass ul li ul li:hover > ul{
+    display: block;
+}
 
 /*--------------------- ---------------------------------------------
-      monitores minimo de 1080px*720px maximo 1215px
+            monitores minimo de 1080px
 --------------------- -----------------------------------------------*/
-@media (min-width: 1080px) and (min-height: 720px){
+@media (max-width: 1279px){
 
   /* ocultamos las siguientes opciones del navbar */
-  /*.navClass ul li.opcion-cuentas{
+  .navClass ul li.opcion-cuentas{
     display: none;
   }
   .navClass ul li.opcion-consultas{
-    display: none ;
+    display: none;
   }
   .navClass ul li.opcion-evaluacion{
-    display: none ;
-  }*/
+    display: none;
+  }
   /* padding de todo el navbar*/
   div.main-container{
-    padding-left: 135px;
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 160px;
+    transition: 0.5;
   }
   /* ubicacion de los elementos del navbar */
   div.nav-header>a{
@@ -216,142 +251,3 @@ ul.drop-menu li a{
   }
 
 }
-/*--------------------- ---------------------------------------------
-      monitores minimo de 1280px*720px maximo 1215px
---------------------- -----------------------------------------------*/
-/*@media (min-width: 1280px) and (min-height: 720px) {
-  div.nav-header>a{
-    margin: 0px 0px 0px -107px;
-  }
-
-  div.main-container{
-    padding-left: 120px;
-  }
-  .navClass ul li.opcion-menu-responsive{
-    display: none;
-  }
-  .navClass ul li.opcion-cuentas{
-    display: block;
-  }
-  .navClass ul li.opcion-consultas{
-    display: block;
-  }
-  .navClass ul li.opcion-evaluacion{
-    display: block;
-  }
-  /* desplegar primer menú */
-  /*.navClass ul li:hover > ul{
-      display: block;
-      color:#FFFFFF;
-  }
-  /* color de cada opcion del menú cuando el mouse pasa por encima*/
-/*  ul.drop-menu li:hover{
-      background-color: #3B9AC1 !important;
-  }
-
-  /* desplegar los subMenus */
-/*  .navClass ul li ul li:hover > ul{
-      display: block;
-  }
-  /* color y fondo de los subMenu */
-/*  .navClass ul li ul li:hover > ul li:hover{
-      background-color: #42AEDA !important;
-      color: #FFFFFF;
-  }
-
-}
-
-/*--------------------- ---------------------------------------------------
-        monitores de 1366px*720px minimo
---------------------- -----------------------------------------------------*/
-/*@media (min-width: 1366px) and (min-height: 720px) {
-
-  /* ubicacion de los elementos del navbar */
-/*  div.nav-header>a{
-    margin: 0px 0px 0px -108px;
-  }
-  div.main-container{
-    padding-left: 174px;
-  }
-
-  /* desplegar primer menú */
-  /*.navClass ul li:hover > ul{
-      display: block;
-      color:#FFFFFF;
-  }
-  /* color de cada opcion del menú cuando el mouse pasa por encima*/
-  /*ul.drop-menu li:hover{
-      background-color: #3B9AC1 !important;
-  }
-
-  /* desplegar los subMenus */
-  /*.navClass ul li ul li:hover > ul{
-      display: block;
-  }
-  /* color y fondo de los subMenu */
-  /*.navClass ul li ul li:hover > ul li:hover{
-      background-color: #42AEDA !important;
-      color: #FFFFFF;
-  }
-
-}
-
-/*-----------------------------------------------------
-        monitores de 1600px*720px minimo
--------------------------------------------------------*/
-/*@media (min-width: 1600px) and (min-height: 720px) {
-
-  div.main-container{
-    padding-left: 290px;
-  }
-  /* desplegar primer menú */
-/*  .navClass ul li:hover > ul{
-      display: block;
-      color:#FFFFFF;
-  }
-  /* color de cada opcion del menú cuando el mouse pasa por encima*/
-/*  ul.drop-menu li:hover{
-      background-color: #3B9AC1 !important;
-  }
-
-  /* desplegar los subMenus */
-  /*.navClass ul li ul li:hover > ul{
-      display: block;
-  }
-  /* color y fondo de los subMenu */
-  /*.navClass ul li ul li:hover > ul li:hover{
-      background-color: #42AEDA !important;
-      color: #FFFFFF;
-  }
-
-}
-
-/*-----------------------------------------------------
-        monitores 1920px*720px minimo
--------------------------------------------------------*/
-/*@media (min-width: 1920px) and (min-height: 720px) {
-
-  div.main-container{
-    padding-left: 0px;
-  }
-  /* desplegar primer menú */
-/*.navClass ul li:hover > ul{
-      display: block;
-      color:#FFFFFF;
-  }
-  /* color de cada opcion del menú cuando el mouse pasa por encima*/
-  /*ul.drop-menu li:hover{
-      background-color: #3B9AC1 !important;
-  }
-
-  /* desplegar los subMenus */
-  /*.navClass ul li ul li:hover > ul{
-      display: block;
-  }
-  /* color y fondo de los subMenu */
-  /*.navClass ul li ul li:hover > ul li:hover{
-      background-color: #42AEDA !important;
-      color: #FFFFFF;
-  }
-
-}*/
