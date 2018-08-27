@@ -89,14 +89,22 @@
 
             <div [ngClass]="(!codigo.valid && codigo.touched) ? 'form-group has-error error' : 'form-group'">
               <label [ngClass]="(!codigo.valid && codigo.touched) ? 'label-error' : 'label-normal'" for="codigo" class="animated fadeIn fast">Código del canal</label>
+<<<<<<< HEAD
               <input #codigo="ngModel" [(ngModel)]="canal.codigo" name="canal" type="text" class="form-control animated fadeIn" placeholder="Ingrese código del canal"
+=======
+              <input #codigo="ngModel" [(ngModel)]="canal.codigo" name="canal" type="text" class="form-control animated fadeIn" placeholder="Ingrese el código"
+>>>>>>> actualizaciones
                 required/>
               <span class="msg-error animated fadeIn fast" *ngIf="!codigo.valid && codigo.touched">Campo obligatorio</span>
             </div>
 
             <div [ngClass]="(!nombre.valid && nombre.touched) ? 'form-group has-error error' : 'form-group'">
               <label [ngClass]="(!nombre.valid && nombre.touched) ? 'label-error' : 'label-normal'" for="nombre" class="animated fadeIn fast">Nombre del canal</label>
+<<<<<<< HEAD
               <input #nombre="ngModel" [(ngModel)]="canal.nombre" name="nombre" type="text" class="form-control animated fadeIn" placeholder="Ingrese nombre del canal"
+=======
+              <input #nombre="ngModel" [(ngModel)]="canal.nombre" name="nombre" type="text" class="form-control animated fadeIn" placeholder="Ingrese el nombre"
+>>>>>>> actualizaciones
                 required/>
               <span class="msg-error animated fadeIn fast" *ngIf="!nombre.valid && nombre.touched">Campo obligatorio</span>
             </div>
@@ -110,7 +118,11 @@
                   </sup>
                   <i>/seg</i>)</span>
               </label>
+<<<<<<< HEAD
               <input #caudal="ngModel" [(ngModel)]="canal.caudalDisenio" name="caudal" type="number" class="form-control animated fadeIn" placeholder="Ingrese nombre del canal"
+=======
+              <input #caudal="ngModel" [(ngModel)]="canal.caudalDisenio" name="caudal" type="number" class="form-control animated fadeIn" placeholder="Ingrese el caudal diseño"
+>>>>>>> actualizaciones
                 required/>
               <span class="msg-error" *ngIf="!caudal.valid && caudal.touched">Valor incorrecto</span>
             </div>
@@ -120,7 +132,11 @@
                 <span>(
                   <i>Km</i>)</span>
               </label>
+<<<<<<< HEAD
               <input #longitud="ngModel" [(ngModel)]="canal.longitud" name="longitud" type="number" class="form-control animated fadeIn" placeholder="Ingrese nombre del canal"
+=======
+              <input #longitud="ngModel" [(ngModel)]="canal.longitud" name="longitud" type="number" class="form-control animated fadeIn" placeholder="Ingrese la longitud"
+>>>>>>> actualizaciones
                 required/>
               <span class="msg-error" *ngIf="!longitud.valid && longitud.touched">Campo incorrecto</span>
             </div>

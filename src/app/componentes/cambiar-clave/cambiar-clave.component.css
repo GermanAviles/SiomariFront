@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*-------------------------------------------------------------------------
                     estilo al formulario, label y botones
 ---------------------------------------------------------------------------*/
@@ -64,3 +65,25 @@ input[type=password]:focus{
   border-color: #B44141;
   box-shadow: 0 0 8px 0 #B44141;
 }
+=======
+.contenedor-principal{
+    width: 80%;
+    height: 100%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    background-color: transparent;
+}
+
+div.cont_btns{
+    margin-left:210px;
+    width: 100%
+}
+
+button.btn_guardar{
+    margin-left: 20px;
+    position: relative;
+    width: 45%;
+}
+>>>>>>> actualizaciones

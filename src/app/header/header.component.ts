@@ -49,11 +49,20 @@ export class HeaderComponent implements OnInit {
     sessionStorage.clear();
     this.router.navigate(['login']);
   }
+<<<<<<< HEAD
 /*
+=======
+
+>>>>>>> actualizaciones
   desplegar(){
       $(".desplegar-submenu").click(function(){
         $(this).children("ul").toggle();
       });
   }
+<<<<<<< HEAD
 */
 }
+=======
+
+}
+>>>>>>> actualizaciones

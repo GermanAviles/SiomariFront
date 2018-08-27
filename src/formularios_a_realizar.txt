@@ -1,0 +1,11 @@
+Control sobre los formularios de la app:
+
+1) REGISTRO(Listo):     -> Predio(Terminado), Usuario(Terminado).
+2) ESTROPER(Listo):     -> Unidad(Terminado), Zona(Terminado), Seccion(Terminado), Canal(Editar terminado, Registrar y agregar rutas dañadas), Cultivo(Terminado), Obra(Terminado), Servidores(Terminado).
+3) HIDROMETRIA(No Listo):  -> Estructuras de control (hacer todo, esta largo).
+4) PLANEACIÓN(No Listo):   -> Solitud de siembra(completar), plan de siembra(completar), Balance(completar), Climatologia(hacer todo), condeplan(hacer todo).
+5) PROGRAMACIÓN(No Listo): -> Programacion semanal(hacer todo), caudal semanal(hacer todo).
+6) DISTRIBUCIÓN(No Listo): -> Registro de manejo de agua (hacer todo), Grafica de manejo de agua (hacer todo).
+7) EVALUCACIÓN(No Listo):  -> Eficiencia/Perdidas(hacer todo).
+8) CONSULTAS(No Listo):    -> Facturación(hacer todo), RGU(hacer todo), RGP(hacer todo), Canal (hacer todo), distribución de agua(hacer todo).
+9) CUENTA(Listo):       -> Crear(Terminado), Actualizar(Terminado), cambiar contraseña(Terminado).
