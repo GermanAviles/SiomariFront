@@ -3,14 +3,12 @@
 ---------------------------------------------------------------------------*/
 .contenedor-principal{
   width: 100%;
-  height: 110%;
+  flex-flow: row wrap;
   padding-top: 30px;
   padding-bottom: 50px;
   padding-right: 50px;
   padding-left: 50px;
-  margin-top: -20px;
-  background-color: rgba(255,255,255,0.7); /* -a- me indica el porcentaje de opacidad*/
-  opacity: 0.3;
+  background-color: rgba(255,255,255,0); /* -a- me indica el porcentaje de opacidad*/
 }
 div label.label-normal {
   color: #848889;
@@ -45,7 +43,6 @@ button.btn_buscar{
   box-sizing: border-box;
   box-shadow: 0px 0px 5px 0px dodgerBlue;
   background: #FFFFFF;
-  opacity: 0.3;
 }
 .Titutlo_form{
   font-family: 'PT Sans';
@@ -56,6 +53,6 @@ button.btn_buscar{
   color: #3B9AC1;
 }
 table.tabla_predio{
-  width: 760px;
-  margin-left: -265px;
+  width: 995px;
+  margin-left: -342px;
 }
