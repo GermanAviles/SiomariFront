@@ -3,7 +3,7 @@
 }
 
 body.cont-body {
-<<<<<<< HEAD
+
     padding-top: 70px;
     margin-bottom: 20px;
     background-color: #F5F5F5;
@@ -11,13 +11,13 @@ body.cont-body {
     background-repeat: no-repeat;
     background-attachment: fixed; /* el fondo permanecerá fijo */
    /*background: url("./assets/img/flat-lay-2583213_1920.jpg") no-repeat fixed*/ /*Esto es lo mismo que lo anterior pero con una superpropiedad */
-=======
+
   padding-top: 70px;
   margin-bottom: 20px;
   /*background-color: #F5F5F5;*/
   background-image: url("./assets/img/fondo_principal.jpg");
   background-repeat: no-repeat;
->>>>>>> actualizaciones
+
 }
 
 .pointer {
@@ -29,18 +29,14 @@ body.cont-body {
 }
 
 .balance-success {
-<<<<<<< HEAD
-    background-color: #D4EDDA;
-=======
   background-color: #D4EDDA;
->>>>>>> actualizaciones
+  background-color: #D4EDDA;
 }
 
 
 /* Animaciones */
 
 .animated {
-<<<<<<< HEAD
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -66,12 +62,6 @@ body.cont-body {
 
 .fadeIn {
   animation-name: fadeIn;
-}
-=======
--webkit-animation-duration: 1s;
-animation-duration: 1s;
--webkit-animation-fill-mode: both;
-animation-fill-mode: both;
 }
 
 .fast {
@@ -205,4 +195,3 @@ input[type=text]:focus{
   border-radius: 4px 0px 0px 4px;
 }
 /*---------------------*/
->>>>>>> actualizaciones

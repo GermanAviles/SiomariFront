@@ -62,8 +62,5 @@ input[type=text]:focus{
 .error input[type=text]{
   border-color: #FF5D5D;
   box-shadow: 0 0 8px 0 #FF5D5D;
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> actualizaciones

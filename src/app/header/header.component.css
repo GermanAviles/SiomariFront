@@ -127,7 +127,6 @@ ul.drop-submenu-responsive li{
 ul.drop-menu li:hover{
     background-color: #3B9AC1 !important;
 }
-<<<<<<< HEAD
 
 /* desplegar los subMenus */
 .navClass ul li ul li:hover > ul{
@@ -377,9 +376,8 @@ ul.drop-menu li:hover{
       display: block;
   }
 
-}
-
 .active-nav {
   background-color: #42AEDA !important;
 }
->>>>>>> actualizaciones
+
+}

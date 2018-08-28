@@ -1,6 +1,5 @@
 <div class="row contenedor-principal animated fadeIn">
 
-<<<<<<< HEAD
 <h2 class="Titutlo_form animated fadeIn fast">Establecer canales de distribución</h2>
 
   <div class="row contenedor-form">
@@ -82,27 +81,25 @@
 
     </div>
 
-
-
   </div>
 
 </div>
-=======
+
   <h2 class="Titutlo_form animated fadeIn fast">Establecer canales de distribución</h2>
-  
+
     <div class="row contenedor-form">
-  
+
       <ng4-loading-spinner> </ng4-loading-spinner>
-  
+
       <br/>
-  
+
       <div *ngIf="estado == 1" class="alert alert-success animated fadeIn fast" role="alert">
         Informacion guardada exitosamente.
       </div>
       <div *ngIf="estado == 0" class="alert alert-danger animated fadeIn fast" role="alert">
         Ha ocurrido un error, intente mas tarde.
       </div>
-  
+
       <div class="col-xs-6">
         <form>
           <div class="form-group">
@@ -114,9 +111,9 @@
             </select>
           </div>
         </form>
-  
+
         <form #formAC="ngForm" (ngSubmit)="consultar()">
-  
+
           <div [ngClass]="(cUnidad.invalid && cUnidad.touched) ? 'form-group has-error' : 'form-group'">
             <label [ngClass]="(cUnidad.invalid && cUnidad.touched) ? 'label-error' : 'label-normal'">Unidad</label>
             <ng2-completer [(ngModel)]="sUnidad" [inputClass]="['form-control']" [datasource]="dataUnidad" [minSearchLength]="4" [textSearching]="'Buscando...'"
@@ -124,7 +121,7 @@
               [disableInput]="consultado" #cUnidad="ngModel" name="unidadC" [clearUnselected]="true" required></ng2-completer>
             <span class="msg-error animated fadeIn fast" *ngIf="cUnidad.invalid && cUnidad.touched">Campo obligatorio</span>
           </div>
-  
+
           <div *ngIf="tipo != 1" [ngClass]="(cZona.invalid && cZona.touched) ? 'form-group has-error' : 'form-group'">
             <label [ngClass]="(cZona.invalid && cZona.touched) ? 'label-error' : 'label-normal'">Zona</label>
             <ng2-completer [(ngModel)]="sZona" [inputClass]="['form-control']" [datasource]="dataZona" [minSearchLength]="4" [textSearching]="'Buscando...'"
@@ -132,7 +129,7 @@
               [disableInput]="consultado" #cZona="ngModel" name="zonaS" [clearUnselected]="true" required></ng2-completer>
             <span class="msg-error animated fadeIn fast" *ngIf="cZona.invalid && cZona.touched">Campo obligatorio</span>
           </div>
-  
+
           <div *ngIf="tipo == 3" [ngClass]="(cSeccion.invalid && cSeccion.touched) ? 'form-group has-error' : 'form-group'">
             <label [ngClass]="(cSeccion.invalid && cSeccion.touched) ? 'label-error' : 'label-normal'">Sección</label>
             <ng2-completer [(ngModel)]="sSeccion" [inputClass]="['form-control']" [datasource]="dataSeccion" [minSearchLength]="4" [textSearching]="'Buscando...'"
@@ -146,9 +143,9 @@
         </form>
       </div>
       <div *ngIf="consultado" class="col-xs-6">
-  
+
         <form #fromR="ngForm" (ngSubmit)="guardar()">
-  
+
           <div [ngClass]="(cSource.invalid && cSource.touched) ? 'form-group has-error' : 'form-group'">
             <label [ngClass]="(cSource.invalid && cSource.touched) ? 'label-error' : 'label-normal'">Canal</label>
             <ng2-completer [(ngModel)]="sCanal" [inputClass]="['form-control']" [datasource]="dataCanal" [minSearchLength]="4" [textSearching]="'Buscando...'"
@@ -164,14 +161,11 @@
             <i class="fas fa-ban fa-fw"></i> Cancelar
           </button>
         </div>
-  
+
         </form>
-  
+
       </div>
-  
-  
-  
+
+
+
     </div>
-  
-  </div>
->>>>>>> actualizaciones
