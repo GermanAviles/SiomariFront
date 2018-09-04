@@ -37,11 +37,7 @@
     "ngx-bootstrap": "^2.0.2",
     "nodemailer": "^4.6.7",
     "popper.js": "^1.14.3",
-<<<<<<< HEAD
     "rxjs": "^5.5.11",
-=======
-    "rxjs": "^5.5.2",
->>>>>>> actualizaciones
     "uuid": "^3.3.2",
     "zone.js": "^0.8.14"
   },

@@ -2,8 +2,7 @@
                     estilo al formulario, label y botones
 ---------------------------------------------------------------------------*/
 .contenedor-principal{
-  width: 65%;
-  height: 100%;
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 50px;
   padding-right: 50px;
@@ -14,14 +13,17 @@
 /* color estandar de los labels*/
 div label.label-normal {
   color: #848889;
+  margin-bottom: 10px;
   transition: .5s;
 }
 div label.label-error{
   color: #B44141;
+  margin-bottom: 10px;
   transition: .5s;
 }
 /* caracteristicas del contenedor del formulario*/
 .contenedor-form{
+  width: 100%;
   border: 1.5px solid #3B9AC1;
   border-radius: 4px;
   padding: 30px 20px 40px 20px;
@@ -49,13 +51,19 @@ div label.label-error{
   margin-top: -40px;
   color: #3B9AC1;
 }
-/* estilo boton agregar */
 div.cont_btns{
-  margin-left: 200px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%
+}
+button.btn_general{
+  width: 18%;
+  margin-right: 8px;
+  margin-top: 8px;
 }
 button.btn_guardar{
-  margin-left: 0px;
-  width: 55%;
+  width: 20%;
 }
 /*------------------------------------------------------------------
                         Estilo de los Inputs
@@ -97,5 +105,4 @@ input[type=text]:focus{
   border-color: #FF5D5D;
   box-shadow: 0 0 8px 0 #B44141;
   transition: .5s;
-
 }

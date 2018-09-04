@@ -35,10 +35,22 @@ button.btn_buscar{
   width: 33%;
 }
 .contenedor-form{
+  width: 97%;
   border: 1.5px solid #3B9AC1;
   border-radius: 4px;
   padding: 30px 20px 40px 20px;
-  margin: 35px 0;
+  margin: 9px 15px;
+  outline: none;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px 0px dodgerBlue;
+  background: #FFFFFF;
+}
+.contenedor-form-table{
+  width: 100%;
+  border: 1.5px solid #3B9AC1;
+  border-radius: 4px;
+  padding: 30px 20px 40px 20px;
+  margin: 9px 0px;
   outline: none;
   box-sizing: border-box;
   box-shadow: 0px 0px 5px 0px dodgerBlue;
@@ -51,8 +63,4 @@ button.btn_buscar{
   font-weight: 400;
   padding-left: 15px;
   color: #3B9AC1;
-}
-table.tabla_predio{
-  width: 995px;
-  margin-left: -342px;
 }

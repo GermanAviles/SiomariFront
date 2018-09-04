@@ -1,8 +1,7 @@
-<div class="col-xs-6 contenedor-principal animated fadeIn fast">
+<div class="col-xs-12 contenedor-principal animated fadeIn fast">
 
-  <h2 class="Titutlo_form animated fadeIn fast">{{title}}</h2>
+  <h2 class="page-header Titutlo_form animated fadeIn fast">{{title}}</h2>
 
-  <br>
 
   <ng4-loading-spinner> </ng4-loading-spinner>
 
@@ -15,13 +14,17 @@
   <div *ngIf="estado == 2" class="alert alert-warning animated fadeIn fast" role="alert">
     El nombre de la unidad ya existe.
   </div>
-  <div class="contenedor-form">
+
+  <div class="col-xs-12 contenedor-form">
 
     <div *ngIf="!mostrarForm" class="form-group animated fadeIn fast">
-      <div class="form-group animated fadeIn">
-        <label class="control-label label-normal animated fadeIn fast" for="nombre">Buscar unidad</label>
-        <ng2-completer (selected)="onSelectedUnidad($event)" [datasource]="dataServiceUnidad" [inputClass]="['form-control']" [minSearchLength]="4"
-          [textSearching]="'Buscando...'" [placeholder]="'Buscar unidad'" [pause]="500" [textNoResults]="'Sin resultados'" [clearUnselected]="true"></ng2-completer>
+      <div class="form-group">
+        <label class="label-normal animated fadeIn fast" for="nombre">Buscar unidad</label>
+        <ng2-completer (selected)="onSelectedUnidad($event)" [datasource]="dataServiceUnidad"
+          [inputClass]="['form-control']" [minSearchLength]="4" [textSearching]="'Buscando...'"
+          [placeholder]="'Buscar unidad'" [pause]="500" [textNoResults]="'Sin resultados'"
+          [clearUnselected]="true">
+        </ng2-completer>
       </div>
     </div>
 
@@ -33,16 +36,17 @@
           required/>
         <span class="msg-error animated fadeIn fast" *ngIf="!nombre.valid && nombre.touched">El nombre es obligatorio</span>
       </div>
-    <div class="cont_btns">
-      <button type="submit" [ngClass]="(!edicion) ? 'btn btn-primary btn-guardar': 'btn btn-primary'" [disabled]="!form.form.valid">
-        <i class="far fa-save fa-fw"></i> Guardar
-      </button>
-      <button *ngIf="edicion" (click)="onClickCancelar()" class="btn btn-danger" type="button">
-        <i class="fas fa-ban fa-fw"></i> Cancelar
-      </button>
-    </div>
 
+      <div class="cont_btns">
+        <button type="submit" [ngClass]="(!edicion) ? 'btn btn-primary btn_guardar': 'btn btn-primary btn_general'" [disabled]="!form.form.valid">
+          <i class="far fa-save fa-fw"></i> Guardar
+        </button>
+        <button *ngIf="edicion" (click)="onClickCancelar()" class="btn btn-danger btn_general" type="button">
+          <i class="fas fa-ban fa-fw"></i> Cancelar
+        </button>
+      </div>
 
     </form>
+
   </div>
 </div>

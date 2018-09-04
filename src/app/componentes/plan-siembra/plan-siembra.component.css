@@ -2,8 +2,7 @@
                     estilo al formulario, label y botones
 ---------------------------------------------------------------------------*/
 .contenedor-principal{
-  width: 90%;
-  height: 100%;
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 50px;
   padding-right: 50px;
@@ -14,10 +13,12 @@
 div label.label-normal {
   color: #848889;
   transition: .5s;
+  margin-bottom: 8px;
 }
 div label.label-error{
   color: #B44141;
   transition: .5s;
+  margin-bottom: 8px;
 }
 /* cambiar de color opcion eliminar*/
 ul > li span.span-error:hover{
@@ -26,6 +27,8 @@ ul > li span.span-error:hover{
 }
 /* caracteristicas del contenedor del formulario*/
 .contenedor-form{
+  display: flex;
+  flex-flow: column wrap;
   width: 100%;
   border: 1.5px solid #3B9AC1;
   border-radius: 4px;
@@ -33,14 +36,58 @@ ul > li span.span-error:hover{
   margin: 8px 0;
   outline: none;
   box-sizing: border-box;
-  background: transparent;
+  background: rgba(255,255,255,0);
+}
+/*Estilo y ubicacion de los botones*/
+button.btn_buscar{
+  width: 25%;
 }
 div.cont_btns{
-  margin-left: 120px;
+  width: 100%;
+  background-color: rgba(255,255,255,0);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
-button.btn_guardar{
-  margin-left: 30px;
-  width: 55%;
+div.cont_btns_modal{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+div.cont_btns_tabla{
+  padding-left: 75%;
+}
+button.btn_general{
+  margin-right: 10px;
+  width: 20%;
+}
+button.btn_editar{
+  color: #FFFFFF;
+  background-color: #ADADAD;
+  border: 1px solid #ADADAD;
+  border-radius: 3px;
+  transition: .5s;
+}
+button.btn_editar:hover{
+  color: #FFFFFF;
+  background-color: #2EA2CB;
+  border: 1px solid #2EA2CB;
+  border-radius: 3px;
+  transition: .5s;
+}
+button.btn_eliminar{
+  color: #FFFFFF;
+  background-color: #ADADAD;
+  border: 1px solid #ADADAD;
+  border-radius: 3px;
+  transition: .5s;
+}
+button.btn_eliminar:hover{
+  color: #FFFFFF;
+  background-color: #CB2E2E;
+  border: 1px solid #CB2E2E;
+  border-radius: 3px;
+  transition: .5s;
 }
 /* caracteristicas del titulo*/
 .Titutlo_form{
@@ -50,15 +97,11 @@ button.btn_guardar{
   padding-left: 15px;
   color: #3B9AC1;
 }
-
-/* estilo boton agregar */
-button.btn-agregar-kc{
-  /*background-color: #3B9AC1;
-  color: #FFFFFF;
-  width: 35%;*/
-  margin-top: 25px;
-}
-button.btn-agregar:hover{
-  background-color: #2C80A4;
-  transition: .5s;
+.Titutlo_modal{
+  font-family: 'PT Sans';
+  font-size: 22px;
+  font-style: normal;
+  padding-left: 15px;
+  color: #3B9AC1;
+  margin-left: 30%;
 }

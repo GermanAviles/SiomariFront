@@ -2,36 +2,32 @@
                     estilo al formulario, label y botones
 ---------------------------------------------------------------------------*/
 .contenedor-principal{
-  width: 90%;
-  height: 100%;
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 50px;
   padding-right: 50px;
   padding-left: 50px;
-  background-color: transparent;
-}
-/* cambiar de color opcion eliminar*/
-ul > li span.span-error:hover{
-  background-color: #B44141;
-  transition: .4s;
+  background-color: rgba(255,255,255,0);
 }
 /* caracteristicas del contenedor del formulario*/
 .contenedor-form{
   width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
   border: 1.5px solid #3B9AC1;
   border-radius: 4px;
-  padding: 30px 20px 40px 20px;
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 15%;
   margin: 8px 0;
   outline: none;
   box-sizing: border-box;
-  background: transparent;
+  background: rgba(255,255,250,0);
 }
 div.cont_btns{
   margin-left: 120px;
-}
-button.btn_guardar{
-  margin-left: 30px;
-  width: 55%;
 }
 /* caracteristicas del titulo*/
 .Titutlo_form{
@@ -40,4 +36,42 @@ button.btn_guardar{
   font-style: normal;
   padding-left: 15px;
   color: #3B9AC1;
+}
+.titutlo_tablas{
+  font-family: 'PT Sans';
+  font-size: 25px;
+  font-style: normal;
+  text-align: center;
+  padding-left: 15px;
+  color: #3B9AC1;
+  margin-bottom: 17px;
+  margin-left: 40%;
+}
+/* caracteristicas del contenedor del formulario*/
+.contenedor-info{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  border: 1.5px solid #3B9AC1;
+  border-radius: 4px;
+  padding: 30px 20px;
+  margin: 10px 0;
+  outline: none;
+  box-sizing: border-box;
+  background: rgba(255,255,255,1);
+}
+/* color estandar de los labels*/
+.label-normal {
+  color: #848889;
+  transition: .5s;
+}
+button.btn_consultar{
+/*  margin-top: 20px;*/
+  width: 100%;
+}
+div.cont_elementos{
+/* width: 30%;*/
+  background-color: rgba(255,255,255,0);
+  margin-right: 8px;
 }

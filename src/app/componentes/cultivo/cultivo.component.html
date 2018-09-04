@@ -16,7 +16,7 @@
     El nombre del cultivo ya existe.
   </div>
 
-  <div *ngIf="!mostrarForm" class="form-group col-xs-6 contenedor-form animated fadeIn fast">
+  <div *ngIf="!mostrarForm" class="form-group contenedor-form col-xs-6 contenedor-form animated fadeIn fast">
     <div class="form-group">
       <label class="control-label label-normal animated fadeIn fast">Buscar cultivo</label>
       <ng2-completer (selected)="onSelectedCultivo($event)" [datasource]="dataServiceCultivo" [inputClass]="['form-control']" [minSearchLength]="3"

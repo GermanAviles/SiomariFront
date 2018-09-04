@@ -1,10 +1,8 @@
 <div class="col-xs-12 contenedor-principal animated fadeIn">
 
   <div class="ContTitulo">
-    <h2 class="Titutlo_form animated fadeIn fast">{{title}}</h2>
+    <h2 class="page-header Titutlo_form animated fadeIn fast">{{title}}</h2>
   </div>
-
-  <br>
 
   <div *ngIf="estado == 1" class="alert alert-success animated fadeIn fast" role="alert">
     La informacion se ha guardado correctamente.
@@ -16,7 +14,7 @@
     La identificacion ya existe.
   </div>
 
-  <form *ngIf="!mostrarForm" class="col-xs-6 animated fadeIn" novalidate>
+  <form *ngIf="!mostrarForm" class="col-xs-6 contenedor-form animated fadeIn" novalidate>
     <div class="form-group animated fadeIn fast">
       <label class="label-normal animated fadeIn fast">Buscar Usuario</label>
       <ng2-completer
@@ -91,15 +89,6 @@
             [(ngModel)]="searchPredio" id="predio" class="inputPredio" name="predio" [clearUnselected]=true></ng2-completer>
         </div>
 
-        <div class="cont_btns">
-          <button [ngClass]="(!edicion) ? 'btn btn-primary btn_guardar': 'btn btn-primary btn_general'" type="submit" [disabled]="!form.form.valid" >
-            <i class="far fa-save fa-fw"></i> Guardar
-          </button>
-          <button *ngIf="edicion" (click)="onClickCancelar()" class="btn btn-danger btn_general" type="button">
-            <i class="fas fa-ban fa-fw"></i> Cancelar
-          </button>
-        </div>
-
       </div>
 
       <div class="col-xs-6">
@@ -146,8 +135,15 @@
 
       </div>
 
+      <div class="cont_btns">
+        <button [ngClass]="(!edicion) ? 'btn btn-primary btn_guardar': 'btn btn-primary btn_general'" type="submit" [disabled]="!form.form.valid" >
+          <i class="far fa-save fa-fw"></i> Guardar
+        </button>
+        <button *ngIf="edicion" (click)="onClickCancelar()" class="btn btn-danger btn_general" type="button">
+          <i class="fas fa-ban fa-fw"></i> Cancelar
+        </button>
+      </div>
 
     </div>
-
   </form>
 </div>

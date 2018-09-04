@@ -53,7 +53,9 @@ export class EstructuraControlComponent implements OnInit {
     private completerService: CompleterService,
     private spinnerService: Ng4LoadingSpinnerService,
     private canalService: CanalService
-  ) { }
+  ) {
+    this.option = 1;
+  }
 
   ngOnInit() {
     this.resetVariables();
@@ -97,10 +99,10 @@ export class EstructuraControlComponent implements OnInit {
   }
 
   //tomamos el valor del select para asi mostrar el div correspondiente
-  onChangeOption(event: any) {
+  onClickChoose(option:number, form) {
     this.resetVariables();
     this.estado = undefined;
-    this.option = event.target.value;
+    this.option = option;
   }
 
   //iniciamos la fase de edicion en calibrar
@@ -271,7 +273,7 @@ export class EstructuraControlComponent implements OnInit {
                 labelString: 'Caudal (L/s)',
                 fontColor: '#000'
               },
-              
+
             }],
             yAxes: [{
               display: true,

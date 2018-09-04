@@ -12,24 +12,28 @@
 }
 div label.label-normal {
   color: #848889;
+  /*margin-bottom: 10px;*/
 }
 div label.label-error{
-  color: #FF5D5D;
+  color: #B44141;
+  /*margin-bottom: 8px;*/
 }
 div.cont_btns{
-  margin-left:330px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   width: 100%
 }
 button.btn_general{
-  width: 33%;
-  margin-right: 10px;
+  width: 18%;
+  margin-right: 8px;
+  margin-top: 8px;
 }
 button.btn_guardar{
-  margin-left: -80px;
-  position: relative;
-  width: 100%;
+  width: 20%;
 }
 .contenedor-form{
+  width: 100%;
   border: 1.5px solid #3B9AC1;
   border-radius: 4px;
   padding: 30px 20px 40px 20px;

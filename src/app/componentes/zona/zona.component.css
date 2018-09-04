@@ -2,8 +2,7 @@
                     estilo al formulario, label y botones
 ---------------------------------------------------------------------------*/
 .contenedor-principal{
-  width: 80%;
-  height: 100%;
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 50px;
   padding-right: 50px;
@@ -12,34 +11,38 @@
 }
 div label.label-normal {
   color: #848889;
+  margin-bottom: 10px;
 }
 div label.label-error{
   color: #B44141;
+  margin-bottom: 10px;
 }
-button.btn-guardar{
-  margin-left: 260px;
-  position: relative;
+div.cont_btns{
+/*  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;*/
   width: 100%;
+  margin-left: 40%;
 }
-div.cont-btns{
-  margin-left: 225px;
+button.btn_general{
+  width: 20%;
+  margin-right: 8px;
+  margin-top: 8px;
 }
-button.btn-guardar{
-  width: 33%;
-  margin-left: 85px;
-}
-.btn-general{
-  width: 28%;
-  margin-left: 10px;
+button.btn_guardar{
+  width: 20%;
 }
 .contenedor-form{
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
   border: 1.5px solid #3B9AC1;
   border-radius: 4px;
   padding: 30px 20px 40px 20px;
   margin: 8px 0;
   outline: none;
   box-sizing: border-box;
-  background: #FFFFFF;
+  background: rgba(255,255,255,1);
 }
 .Titutlo_form{
   font-family: 'PT Sans';
@@ -53,10 +56,9 @@ button.btn-guardar{
                         Estilo de los Inputs
 -------------------------------------------------------------------*/
 input[type=text]{
-  width: 100%;
   border: 1px solid #AAAAAA;
   border-radius: 4px;
-  margin: 8px 0;
+  margin: 0px 0;
   outline: none;
   box-sizing: border-box;
   transition: 0.3s;
