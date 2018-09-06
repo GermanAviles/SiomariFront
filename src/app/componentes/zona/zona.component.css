@@ -31,6 +31,7 @@ button.btn_general{
 }
 button.btn_guardar{
   width: 20%;
+  margin-left: 40%;
 }
 .contenedor-form{
   display: flex;

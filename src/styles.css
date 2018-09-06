@@ -1,7 +1,7 @@
 .msg-error {
     color: #A94442;
 }
-
+/* contenedor para el resto de la web*/
 body.cont-body {
     padding-top: 70px;
     margin-bottom: 20px;
@@ -9,7 +9,20 @@ body.cont-body {
     background-image: url("./assets/img/fondo_principal.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed; /* el fondo permanecerá fijo */
+    transition: .5s;
    /*background: url("./assets/img/flat-lay-2583213_1920.jpg") no-repeat fixed*/ /*Esto es lo mismo que lo anterior pero con una superpropiedad */
+}
+/* Fondo para el home (inicio)*/
+body.cont-body-home {
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    margin-bottom: 20px;
+    background-color: #F5F5F5;
+    background-image: url("./assets/img/fondo_home.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: .5s;
 }
 
 .pointer {
