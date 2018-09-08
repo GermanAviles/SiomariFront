@@ -1,18 +1,27 @@
+/* fondo inicio */
 div.cont-principal{
-  width: 100%;
+  width: 1920px;
+  height: 1080px;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  padding-top: 30px;
+  margin-left: -370px;
+  margin-top: -50px;
+  /*padding-top: 30px;
   padding-bottom: 50px;
   padding-right: 50px;
   padding-left: 50px;
-  background-color: rgba(0,0,0,0);
+  margin-top: 0px;*/
+  background-color: #F5F5F5;
+  background-image: url("../../../assets/img/fondo_home.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition: .5s;
 }
 div.contenido{
   width: 70%;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -22,6 +31,7 @@ div.contenido{
   margin-left: 100px;
   margin-right: 100px;
   background-color: rgba(0,0,0,0);
+  transition: .5s;
 }
 div.cont_btns{
   width: 100%;
@@ -35,13 +45,18 @@ button.btn_comenzar{
   font-size: 23px;
   width: 30%;
 }
-
+div.cont_titulos{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
 h2.TItulo_Inicio{
   font-family: 'Old Standard TT', 'Old Standard TT', 'PT Sans', sans-serif;
   text-align: center;
   font-size: 40px;
   font-weight: 400;
   margin-bottom: 15px;
+  transition: .5s;
   color: rgba(255,255,255,1);
 }
 h4.subtitulo_inicio{
@@ -49,5 +64,36 @@ h4.subtitulo_inicio{
   text-align: center;
   font-size: 25px;
   margin-bottom: 25px;
+  transition: .5s;
   color: rgba(255,255,255);
+}
+
+@media (max-width: 1307px){
+  h2.TItulo_Inicio{
+    font-size: 35px;
+    transition: .5s;
+  }
+}
+@media (max-width: 1280px){
+  h2.TItulo_Inicio{
+    font-size: 30px;
+    transition: .5s;
+  }
+}
+@media (max-width: 1199px){
+  div.contenido{
+    width: 70%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 24%;
+    margin-left: -220px;
+    margin-right: 0px;
+    background-color: rgba(0,0,0,0);
+    transition: .5s;
+  }
 }

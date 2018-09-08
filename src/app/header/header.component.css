@@ -152,7 +152,7 @@ ul.drop-menu li:hover{
   div.main-container{
     display: flex;
     flex-flow: row wrap;
-    padding-left: 180px;
+    padding-left: 210px;
     justify-content: space-around;
     transition: 0.5;
   }

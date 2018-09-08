@@ -1,0 +1,114 @@
+<div class="row contenedor-principal">
+
+    <h2 class="page-header Titutlo_form animated fadeIn">Programación semanal</h2>
+
+    <ng4-loading-spinner> </ng4-loading-spinner>
+
+    <div *ngIf="estado == 1" class="alert alert-success animated fadeIn fast" role="alert">
+      Información guardada exitosamente.
+    </div>
+    <div *ngIf="estado == 2" class="alert alert-warning animated fadeIn fast" role="alert">
+      El canal no posee información para realizar la consulta.
+    </div>
+    <div *ngIf="estado == 0" class="alert alert-danger animated fadeIn fast" role="alert">
+      Ha ocurrido un error, intente mas tarde.
+    </div>
+
+  <div *ngIf="!consultado" class="row contenedor-form">
+
+    <div class="col-xs-12">
+
+      <form #formAC="ngForm" autocomplete="off">
+
+        <div [ngClass]="(cSource.invalid && cSource.touched) ? 'form-group has-error' : 'form-group'">
+          <label [ngClass]="(cSource.invalid && cSource.touched) ? 'label-error' : 'label-normal'">Canal</label>
+          <ng2-completer [(ngModel)]="sCanal" [inputClass]="['form-control']" [datasource]="dataCanal" [minSearchLength]="4" [textSearching]="'Buscando...'"
+            [placeholder]="'Buscar canal'" [textNoResults]="'Sin resultados'" [pause]="500" (selected)="onSourceSelect($event)"
+            #cSource="ngModel" name="predioSearch" [clearUnselected]="true" required></ng2-completer>
+          <span class="msg-error animated fadeIn fast" *ngIf="cSource.invalid && cSource.touched">Campo obligatorio</span>
+        </div>
+
+      </form>
+
+      <form #form="ngForm" (ngSubmit)="consultar()" autocomplete="off">
+        <!--[ngClass]="((cFecha.invalid && cFecha.touched) || fechaInvalida) ? 'form-group has-error' : 'form-group'"-->
+        <div [ngClass]="(cFecha.invalid && cFecha.touched) ? 'form-group has-error' : 'form-group'">
+          <label [ngClass]="(cFecha.invalid && cFecha.touched) ? 'label-error' : 'label-normal'">Fecha</label>
+          <input [(bsValue)]="fecha" [(ngModel)]="ff" #cFecha="ngModel" name="cFecha" type="text" class="form-control" #dp="bsDatepicker"
+            (bsValueChange)="onValueChange($event)" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY', containerClass: 'theme-blue' }"
+            required placeholder="Ingrese la fecha (debe de ser un lunes)" />
+          <span class="msg-error animated fadeIn fast" *ngIf="cFecha.invalid && cFecha.touched">Valor incorrecto</span>
+          <span class="msg-error animated fadeIn fast" *ngIf="fechaInvalida">La fecha debe de ser un lunes</span>
+        </div>
+
+        <div class="cont_btns">
+          <button [disabled]="!form.form.valid || !formAC.form.valid || idCanal == 0 || fechaInvalida" class="btn btn-primary btn_consultar" type="submit">
+            Consultar
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+
+  <div *ngIf="consultado" class="row">
+
+    <form #formSave="ngForm" (ngSubmit)="registrar(formSave)" autocomplete="off">
+
+      <div class="col-xs-6">
+
+          <div [ngClass]="(!cLn.valid && cLn.touched) ? 'form-group has-error' : 'form-group'">
+            <label [ngClass]="(cLn.invalid && cLn.touched) ? 'label-error' : 'label-normal'">Lamina (m)</label>
+            <input [(ngModel)]="programacionSemanal.lamina" (keyup)="onKeyUp()" #cLn="ngModel" name="cln"type="number" class="form-control" />
+            <span class="msg-error animated fadeIn fast" *ngIf="!cLn.valid && cLn.touched">Valor incorrecto</span>
+          </div>
+
+          <div [ngClass]="(!cHa.valid && cHa.touched) ? 'form-group has-error' : 'form-group'">
+            <label [ngClass]="(cHa.invalid && cHa.touched) ? 'label-error' : 'label-normal'">Superficie (ha)</label>
+            <input [(ngModel)]="programacionSemanal.area" (keyup)="onKeyUp()" type="number" class="form-control" placeholder="Ingrese la superficie" #cHa="ngModel" name="nombre"
+              required/>
+            <span class="msg-error animated fadeIn fast" *ngIf="!cHa.valid && cHa.touched">Valor incorrecto</span>
+          </div>
+
+          <div class="cont_btns">
+            <button type="submit" class="btn btn-primary btn_general" [disabled]="!formSave.form.valid || consumo > programacionSemanal.capacidadCanal">
+              <i class="fas fa-save fa-fw"></i> Guardar
+            </button>
+            <button type="button" class="btn btn-danger btn_general" (click)="consultado = false">
+              <i class="fas fa-ban fa-fw"></i> Cancelar
+            </button>
+          </div>
+
+        </div>
+
+      <div class="col-xs-6">
+        <div [ngClass]="(consumo > programacionSemanal.capacidadCanal) ? 'form-group has-error' : 'form-group'">
+          <label [ngClass]="(consumo > programacionSemanal.capacidadCanal) ? 'label-error' : 'label-normal'">Gasto necesario
+            <span>(
+              <i>m</i>
+              <sup>
+                <i>3</i>
+              </sup>
+              <i>/seg</i>)</span>
+          </label>
+          <input value="{{consumo.toFixed(3)}}" type="text" class="form-control" readonly/>
+          <span class="msg-error animated fadeIn fast" *ngIf="consumo > programacionSemanal.capacidadCanal">El gasto necesario rebosa la capacidad del canal.</span>
+        </div>
+
+        <div class="form-group">
+          <label class="label-normal">Capacidad del canal
+            <span>(
+              <i>m</i>
+              <sup>
+                <i>3</i>
+              </sup>
+              <i>/seg</i>)</span>
+          </label>
+          <input value="{{programacionSemanal.capacidadCanal}}" type="text" class="form-control" readonly/>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
