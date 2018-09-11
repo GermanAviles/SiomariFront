@@ -47,6 +47,9 @@ h2.TItulo_Inicio{
   color: rgba(255,255,255,1);
   text-shadow: 3px 3px 2px #000000;
 }
+div.cont_h2{
+  margin-bottom: 150px;
+}
 h4.subtitulo_inicio{
   font-family: 'Old Standard TT', 'PT Sans', sans-serif;
   text-align: center;
@@ -68,7 +71,48 @@ h4.subtitulo_inicio{
     margin-top: -50px;
     padding-right: 50%;
     padding-left: 25%;
-    padding-top: 9%;
+    padding-top: 5%;
+    background-color: #F5F5F5;
+    background-image: url("../../../assets/img/2_1920_1080_2.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: .5s;
+  }
+
+  div.contenido{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 10%;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: rgba(23,112,13,0);
+    transition: .5s;
+  }
+
+  h2.TItulo_Inicio{
+    font-size: 30px;
+    transition: .5s;
+  }
+
+}
+
+@media (max-width: 1366px){
+
+  div.cont-principal{
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    flex-flow: column wrap;
+    margin-left: -370px;
+    margin-top: -50px;
+    padding-right: 25%;
+    padding-left: 25%;
+    padding-top: 5%;
     background-color: #F5F5F5;
     background-image: url("../../../assets/img/2_1920_1080_2.png");
     background-repeat: no-repeat;
