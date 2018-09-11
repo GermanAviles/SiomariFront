@@ -2,8 +2,7 @@
                     estilo al formulario, label y botones
 ---------------------------------------------------------------------------*/
 .contenedor-principal{
-  width: 80%;
-  height: 100%;
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 50px;
   padding-right: 50px;
@@ -12,13 +11,20 @@
 }
 div label.label-normal {
   color: #848889;
+  margin-bottom: 9px;
+  transition: .5s;
 }
 div label.label-error{
   color: #B44141;
+  margin-bottom: 9px;
+  transition: .5s;
 }
 div.cont_btns{
-  margin-left:210px;
-  width: 100%
+  width: 100%;
+  background-color: rgba(255,255,255,0);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 button.btn_general{
   width: 20%;
@@ -27,14 +33,14 @@ button.btn_general{
 button.btn_guardar{
   margin-left: 20px;
   position: relative;
-  width: 45%;
+  width: 30%;
 }
 button.btn_buscar{
-  margin-left: 245px;
   position: relative;
-  width: 33%;
+  width: 30%;
 }
 .contenedor-form{
+  width: 100%;
   border: 1.5px solid #3B9AC1;
   border-radius: 4px;
   padding: 30px 20px 40px 20px;

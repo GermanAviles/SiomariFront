@@ -23,12 +23,14 @@
     <div *ngIf="!mostrarForm" class="form-group">
       <form #fBuscar="ngForm" (ngSubmit)="onClickBuscar()">
         <div class="form-group">
-          <label class="control-label animated fadeIn fast">Buscar cuenta</label>
+          <label class="label-normal animated fadeIn fast">Buscar cuenta</label>
           <input [(ngModel)]="identificacion" placeholder="Buscar por identificación" name="identificacion" class="form-control" type="text" required />
         </div>
-        <button [disabled]="!fBuscar.form.valid" type="submit" class="btn btn-primary btn_buscar">
-          <!-- <i class="fas fa-search fa-fw"></i>--> Buscar
-        </button>
+        <div class="cont_btns">
+          <button [disabled]="!fBuscar.form.valid" type="submit" class="btn btn-primary btn_buscar">
+            <i class="fas fa-search fa-fw"></i> Buscar
+          </button>
+        </div>
       </form>
     </div>
 

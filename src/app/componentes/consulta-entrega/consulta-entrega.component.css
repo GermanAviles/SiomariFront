@@ -13,10 +13,12 @@
 /* color estandar de los labels*/
 div label.label-normal {
   color: #848889;
+  margin-bottom: 9px;
   transition: .5s;
 }
 div label.label-error{
   color: #B44141;
+  margin-bottom: 9px;
   transition: .5s;
 }
 /* cambiar de color opcion eliminar*/

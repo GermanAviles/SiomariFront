@@ -22,7 +22,7 @@ div.cont_btns{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  width: 100%
+  width: 100%;
 }
 button.btn_general{
   width: 18%;

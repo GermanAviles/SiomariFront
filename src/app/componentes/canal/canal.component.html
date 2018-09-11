@@ -16,7 +16,7 @@
 
   <div *ngIf="!mostrarForm" class="contenedor-form-buscar form-group col-xs-6 animated fadeIn">
     <div class="form-group animated fadeIn fast">
-      <label class="control-label">Buscar canal</label>
+      <label class="label-normal">Buscar canal</label>
       <ng2-completer (selected)="onSelectedCanal($event)" [datasource]="dataServiceCanal" [inputClass]="['form-control']" [minSearchLength]="3"
         [textSearching]="'Buscando...'" [placeholder]="'Buscar canal'" [textNoResults]="'Sin resultados'" [clearUnselected]="true"></ng2-completer>
     </div>

@@ -11,8 +11,8 @@ export class InicioComponent implements OnInit {
   nombreDistri:string;
 
   constructor() {
-    this.nombreSistema = "Sistema de información operacional para la utilización de manejo de agua";
-    this.nombreDistri = "Distrito de adecuación de tierras de mediana escala el juncal";
+    this.nombreSistema = "sistema de información operacional para la optimización hidráulica en el manejo del agua de riego";
+    this.nombreDistri = "Distrito De Adecuación De Tierras De Mediana Escala El Juncal";
   }
 
   ngOnInit() {

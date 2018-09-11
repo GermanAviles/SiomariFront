@@ -128,16 +128,16 @@ input[type=text]:focus{
 }
 /* ----------------- Inputs Error ----------------------*/
 .error input[type=text]{
-  border-color: #FF5D5D;
-  box-shadow: 0 0 8px 0 #FF5D5D;
+  border-color: #B44141;
+  box-shadow: 0 0 8px 0 #B44141;
 }
 .error input[type=number]{
-  border-color: #FF5D5D;
-  box-shadow: 0 0 8px 0 #FF5D5D;
+  border-color: #B44141;
+  box-shadow: 0 0 8px 0 #B44141;
 }
 /*-----Fondo Error al icono-----*/
 .inputWithIcon.inputWithIconBgError i{
-  background-color: #FF5D5D;
+  background-color: #B44141;
   color: #FFFFFF;
   padding-top: 10px;
   padding-right: 25px;

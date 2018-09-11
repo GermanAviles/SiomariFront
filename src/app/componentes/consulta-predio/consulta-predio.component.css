@@ -12,6 +12,8 @@
 }
 div label.label-normal {
   color: #848889;
+  margin-bottom: 9px;
+  transition: .5s;
 }
 th.titulo-tabla{
   color: #848889;
